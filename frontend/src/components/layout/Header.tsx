@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from '../LanguageSwitcher';
+
 import { useResponsive } from '../../hooks/useResponsive';
 
 /**
@@ -17,17 +16,17 @@ const Header = () => {
   const [bannerHeight, setBannerHeight] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
-  const { t } = useTranslation();
+
   const { isMobile, isTablet } = useResponsive();
   
-  // 导航链接数据 - 混合导航（锚点+页面路由）
+  // Navigation links data - Mixed navigation (anchor + page routing)
   const navLinks = [
-    { name: '功能特性', path: '/features', type: 'route' },
-    { name: '实时演示', path: '#demo', type: 'anchor' },
-    { name: '产品展示', path: '/showcase', type: 'route' },
-    { name: '技术文档', path: '/docs', type: 'route' },
-    { name: '用户评价', path: '#reviews', type: 'anchor' },
-    { name: '常见问题', path: '#faq', type: 'anchor' },
+    { name: 'Features', path: '/features', type: 'route' },
+    { name: 'Live Demo', path: '#demo', type: 'anchor' },
+    { name: 'Showcase', path: '/showcase', type: 'route' },
+    { name: 'Documentation', path: '/docs', type: 'route' },
+    { name: 'Reviews', path: '#reviews', type: 'anchor' },
+    { name: 'FAQ', path: '#faq', type: 'anchor' },
   ];
   
   // 监听滚动事件和Banner高度变化
@@ -110,7 +109,7 @@ const Header = () => {
       }`}
       style={{ top: `${bannerHeight}px` }}
       role="banner"
-      aria-label={t('navigation.main')}
+      aria-label="Main navigation"
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
@@ -118,7 +117,7 @@ const Header = () => {
           <Link 
             to="/" 
             className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-1"
-            aria-label={t('navigation.home')}
+            aria-label="Home"
           >
             <img
               src="/favicon.ico"
@@ -132,7 +131,7 @@ const Header = () => {
           <nav 
             className="hidden md:flex space-x-8"
             role="navigation"
-            aria-label={t('navigation.primary')}
+            aria-label="Primary navigation"
           >
             {navLinks.map((link) => (
               <button
@@ -150,26 +149,25 @@ const Header = () => {
             ))}
           </nav>
           
-          {/* 用户操作区 */}
+          {/* User actions area */}
           <div className="hidden md:flex items-center space-x-4">
-            <LanguageSwitcher />
             <a 
               href="https://pollo.ai?ref=ytayndd"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
-              立即体验
+              Try Now
             </a>
           </div>
           
-          {/* 移动端菜单按钮 */}
+          {/* Mobile menu button */}
           <button
             className="md:hidden text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded p-2"
             onClick={toggleMenu}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
-            aria-label={isMenuOpen ? t('navigation.closeMenu') : t('navigation.openMenu')}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
             <svg
               className="w-6 h-6"
@@ -197,7 +195,7 @@ const Header = () => {
           </button>
         </div>
         
-        {/* 移动端菜单 */}
+        {/* Mobile menu */}
         {isMenuOpen && (
           <div 
             id="mobile-menu"
@@ -206,7 +204,7 @@ const Header = () => {
             <nav 
               className="flex flex-col space-y-4"
               role="navigation"
-              aria-label={t('navigation.mobile')}
+              aria-label="Mobile navigation"
             >
               {navLinks.map((link) => (
                 <button
@@ -223,16 +221,13 @@ const Header = () => {
                 </button>
               ))}
               <div className="flex flex-col space-y-2 pt-2">
-                <div className="py-2">
-                  <LanguageSwitcher />
-                </div>
                 <a 
                   href="https://pollo.ai?ref=ytayndd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 text-left"
                 >
-                  立即体验
+                  Try Now
                 </a>
               </div>
             </nav>

@@ -10,7 +10,7 @@ interface NewsletterSubscribeProps {
 export const NewsletterSubscribe: React.FC<NewsletterSubscribeProps> = ({
   className = '',
   title = 'Subscribe to Our Updates',
-  description = 'Get the latest features, tutorials, and tips from ZOOM EARTH AI.'
+  description = 'Get the latest features, tutorials, and tips from Qwen3-Coder.'
 }) => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -108,4 +108,4 @@ export const NewsletterSubscribe: React.FC<NewsletterSubscribeProps> = ({
   );
 };
 
-export default NewsletterSubscribe; 
+export default NewsletterSubscribe;

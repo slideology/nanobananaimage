@@ -20,7 +20,7 @@ const NotFoundPage: React.FC = () => {
         
         {/* Description */}
         <p className="text-gray-600 mb-8">
-          The page you're looking for seems to have disappeared into the infinite zoom! Don't worry, you can return to the homepage to continue exploring ZOOM EARTH AI.
+          The page you're looking for seems to have disappeared into the infinite code! Don't worry, you can return to the homepage to continue exploring Qwen3-Coder.
         </p>
         
         {/* Back to Home Button */}

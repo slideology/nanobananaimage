@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Menu, X, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../LanguageSwitcher';
+import { useResponsive } from '../../hooks/useResponsive';
 
 /**
- * ZOOM EARTH AI 单页应用导航栏组件
+ * Qwen3-Coder 单页应用导航栏组件
  * 适配单页应用，包含锚点导航和固定导航栏效果
  * 支持AffiliateBanner的动态高度调整
  */
@@ -12,13 +15,19 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [bannerHeight, setBannerHeight] = useState(0);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { t } = useTranslation();
+  const { isMobile, isTablet } = useResponsive();
   
-  // 导航链接数据 - 改为锚点导航
+  // 导航链接数据 - 混合导航（锚点+页面路由）
   const navLinks = [
-    { name: 'Features', path: '#features' },
-    { name: 'Showcase', path: '#showcase' },
-    { name: 'Reviews', path: '#reviews' },
-    { name: 'FAQ', path: '#faq' },
+    { name: '功能特性', path: '/features', type: 'route' },
+    { name: '实时演示', path: '#demo', type: 'anchor' },
+    { name: '产品展示', path: '/showcase', type: 'route' },
+    { name: '技术文档', path: '/docs', type: 'route' },
+    { name: '用户评价', path: '#reviews', type: 'anchor' },
+    { name: '常见问题', path: '#faq', type: 'anchor' },
   ];
   
   // 监听滚动事件和Banner高度变化
@@ -33,7 +42,7 @@ const Header = () => {
       setIsScrolled(scrollTop > 50);
       
       // 检测当前激活的区块
-      const sections = ['showcase', 'features', 'reviews', 'faq'];
+      const sections = ['demo', 'showcase', 'features', 'reviews', 'faq'];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -66,9 +75,13 @@ const Header = () => {
   }, []);
   
   // 判断当前导航链接是否激活
-  const isActive = (path: string) => {
-    const section = path.replace('#', '');
-    return activeSection === section;
+  const isActive = (link: { path: string; type: string }) => {
+    if (link.type === 'route') {
+      return location.pathname === link.path;
+    } else {
+      const section = link.path.replace('#', '');
+      return activeSection === section;
+    }
   };
   
   // 切换移动端菜单显示状态
@@ -76,11 +89,16 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // 平滑滚动到指定区块
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  // 处理导航点击
+  const handleNavigation = (link: { path: string; type: string }) => {
+    if (link.type === 'route') {
+      navigate(link.path);
+    } else {
+      const sectionId = link.path.replace('#', '');
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMenuOpen(false);
   };
@@ -91,30 +109,41 @@ const Header = () => {
         isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
       }`}
       style={{ top: `${bannerHeight}px` }}
+      role="banner"
+      aria-label={t('navigation.main')}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo区域 */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link 
+            to="/" 
+            className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-1"
+            aria-label={t('navigation.home')}
+          >
             <img
               src="/favicon.ico"
-              alt="ZOOM EARTH AI Logo"
+              alt="Qwen3-Coder Logo"
               className="w-8 h-8 rounded-full"
             />
-            <span className="text-2xl font-bold text-white">ZOOM EARTH AI</span>
+            <span className={`font-bold text-white ${isMobile ? 'text-xl' : 'text-2xl'}`}>Qwen3-Coder</span>
           </Link>
           
           {/* 桌面端导航菜单 */}
-          <nav className="hidden md:flex space-x-8">
+          <nav 
+            className="hidden md:flex space-x-8"
+            role="navigation"
+            aria-label={t('navigation.primary')}
+          >
             {navLinks.map((link) => (
               <button
                 key={link.path}
-                onClick={() => scrollToSection(link.path.replace('#', ''))}
-                className={`font-medium transition-colors duration-200 ${
-                  isActive(link.path)
+                onClick={() => handleNavigation(link)}
+                className={`font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1 ${
+                  isActive(link)
                     ? 'text-blue-400 border-b-2 border-blue-400'
                     : 'text-gray-300 hover:text-blue-400'
                 }`}
+                aria-current={isActive(link) ? 'page' : undefined}
               >
                 {link.name}
               </button>
@@ -130,14 +159,17 @@ const Header = () => {
               rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
-              Try Now
+              立即体验
             </a>
           </div>
           
           {/* 移动端菜单按钮 */}
           <button
-            className="md:hidden text-gray-300 focus:outline-none"
+            className="md:hidden text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded p-2"
             onClick={toggleMenu}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={isMenuOpen ? t('navigation.closeMenu') : t('navigation.openMenu')}
           >
             <svg
               className="w-6 h-6"
@@ -167,17 +199,25 @@ const Header = () => {
         
         {/* 移动端菜单 */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-gray-700">
-            <nav className="flex flex-col space-y-4">
+          <div 
+            id="mobile-menu"
+            className="md:hidden mt-4 py-4 border-t border-gray-700"
+          >
+            <nav 
+              className="flex flex-col space-y-4"
+              role="navigation"
+              aria-label={t('navigation.mobile')}
+            >
               {navLinks.map((link) => (
                 <button
                   key={link.path}
-                  onClick={() => scrollToSection(link.path.replace('#', ''))}
-                  className={`font-medium transition-colors duration-200 text-left ${
-                    isActive(link.path)
+                  onClick={() => handleNavigation(link)}
+                  className={`font-medium transition-colors duration-200 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1 ${
+                    isActive(link)
                       ? 'text-blue-400'
                       : 'text-gray-300 hover:text-blue-400'
                   }`}
+                  aria-current={isActive(link) ? 'page' : undefined}
                 >
                   {link.name}
                 </button>
@@ -192,7 +232,7 @@ const Header = () => {
                   rel="noopener noreferrer"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 text-left"
                 >
-                  Try Now
+                  立即体验
                 </a>
               </div>
             </nav>

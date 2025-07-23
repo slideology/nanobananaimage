@@ -6,6 +6,9 @@ import SEOHead from './components/SEOHead';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import ShowcasePage from './pages/ShowcasePage';
+import FeaturesPage from './pages/FeaturesPage';
+import DocsPage from './pages/DocsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 // 保留的页面引入
@@ -22,6 +25,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/showcase" element={<ShowcasePage />} />
+          <Route path="/docs" element={<DocsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           
           {/* 博客功能保留 */}

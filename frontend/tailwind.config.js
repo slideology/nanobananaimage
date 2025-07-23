@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Earth Zoom AI 地球/太空主题配色方案  
+        // Qwen3-Coder 代码/技术主题配色方案  
         'earth-blue': '#1e40af',      // 地球深蓝 - 海洋和大气层
         'space-dark': '#0f172a',      // 太空深黑 - 宇宙背景
         'cosmic-purple': '#7c3aed',   // 宇宙紫色 - 神秘太空

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://earthzoomai.org/sitemap.xml
+Sitemap: https://qwen3coder.com/sitemap.xml
 
 # Crawl delay for better performance
 Crawl-delay: 1

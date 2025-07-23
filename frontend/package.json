@@ -1,7 +1,7 @@
 {
-  "name": "earth-zoom-ai-frontend",
-  "version": "2.0.0",
-  "description": "Earth Zoom AI前端 - 探索从微观到宇宙的视觉革命展示网站",
+  "name": "qwen3-coder-frontend",
+  "version": "1.0.0",
+  "description": "Qwen3-Coder前端 - 新一代AI代码助手展示平台",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -11,6 +11,7 @@
     "clsx": "^2.1.1",
     "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^8.0.4",
+    "lucide-react": "^0.525.0",
     "postcss": "^8.4.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

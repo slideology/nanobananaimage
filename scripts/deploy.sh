@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Earth Zoom AI 部署脚本
+# Qwen3-Coder 部署脚本
 # 使用方法: ./scripts/deploy.sh [环境]
 # 环境选项: staging | production
 
@@ -116,9 +116,9 @@ print_info "- 构建时间: $(date)"
 print_info "- 构建产物: frontend/dist/"
 
 if [ "$ENVIRONMENT" = "production" ]; then
-    print_info "- 生产环境URL: https://earthzoomai.org"
+    print_info "- 生产环境URL: https://qwen3coder.com"
 else
     print_info "- 测试环境URL: 请根据实际配置设置"
 fi
 
-print_success "🎉 部署流程完成！" 
+print_success "🎉 部署流程完成！"

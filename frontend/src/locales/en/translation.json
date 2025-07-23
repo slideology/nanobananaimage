@@ -1,17 +1,17 @@
 {
   "affiliateBanner": {
-    "message": "Free to Generate AI Video Online Now",
+    "message": "Free to Generate AI Code Online Now",
     "cta": "Try it Free",
     "close": "Close banner"
   },
   "twitterFeedback": {
-    "title": "Share Your Experience with ZOOM EARTH AI",
-    "subtitle": "Love using ZOOM EARTH AI? See what our users are saying on Twitter with #ZoomEarthAI!"
+    "title": "Share Your Experience with QWEN3 CODER",
+    "subtitle": "Love using QWEN3 CODER? See what our users are saying on Twitter with #Qwen3Coder!"
   },
   "notFoundPage": {
     "title": "404",
     "subtitle": "Page Not Found",
-    "description": "The page you're looking for seems to have disappeared into the infinite zoom! Don't worry, you can return to the homepage to continue exploring ZOOM EARTH AI.",
+    "description": "The page you're looking for seems to have disappeared into the infinite code! Don't worry, you can return to the homepage to continue exploring QWEN3 CODER.",
     "backToHome": "Back to Home",
     "imageAlt": "404 Error"
   }

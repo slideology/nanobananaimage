@@ -3,25 +3,25 @@ import { Link } from 'react-router-dom';
 
 const BlogPage: React.FC = () => {
   useEffect(() => {
-    document.title = 'ZOOM EARTH AI Blog - AI Video Technology Insights';
+    document.title = 'Qwen3-Coder Blog - AI Code Generation Technology Insights';
   }, []);
 
   const blogPosts = [
     {
       id: 'ai-video-revolution',
       title: 'The AI Video Generation Revolution',
-      excerpt: 'Discover how AI is transforming video creation with ZOOM EARTH AI technology.',
+      excerpt: 'Discover how AI is transforming software development with Qwen3-Coder technology.',
       date: '2024-01-15',
       category: 'Technology',
-      image: '/images/earth-zoom/blog/ai-revolution.jpg'
+      image: '/images/qwen3-coder/blog/ai-revolution.jpg'
     },
     {
       id: 'education-case-study',
       title: 'Transforming Education with AI Videos',
-      excerpt: 'How universities use ZOOM EARTH AI to improve student engagement.',
+      excerpt: 'How universities use Qwen3-Coder to improve student engagement.',
       date: '2024-01-12',
       category: 'Education',
-      image: '/images/earth-zoom/blog/education.jpg'
+      image: '/images/qwen3-coder/blog/education.jpg'
     }
   ];
 
@@ -30,7 +30,7 @@ const BlogPage: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">ZOOM EARTH AI Blog</h1>
+          <h1 className="text-5xl font-bold text-white mb-6">Qwen3-Coder Blog</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Insights, tutorials, and case studies about AI-powered video generation technology
           </p>
@@ -84,7 +84,7 @@ const BlogPage: React.FC = () => {
             to="/"
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
           >
-            Explore ZOOM EARTH AI
+            Explore Qwen3-Coder
           </Link>
         </div>
       </div>
@@ -92,4 +92,4 @@ const BlogPage: React.FC = () => {
   );
 };
 
-export default BlogPage; 
+export default BlogPage;

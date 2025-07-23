@@ -1,7 +1,7 @@
 {
-  "name": "earth-zoom-ai",
+  "name": "qwen3-coder",
   "version": "1.0.0",
-  "description": "Earth Zoom AI - 探索从微观到宇宙的视觉革命网站",
+  "description": "Qwen3-Coder - 新一代AI代码助手展示平台",
   "scripts": {
     "dev": "cd frontend && npm run dev",
     "build": "cd frontend && npm run build",
@@ -15,16 +15,16 @@
     "test:frontend": "cd frontend && npm run test"
   },
   "keywords": [
-    "earth-zoom-ai",
-    "earth-zoom",
+    "qwen3-coder",
+    "qwen3",
     "ai",
-    "video-generation",
-    "zoom-out",
-    "space-perspective",
-    "cosmic-zoom",
-    "earth-ai"
+    "code-generation",
+    "programming-assistant",
+    "alibaba-ai",
+    "coding-ai",
+    "developer-tools"
   ],
-  "author": "Earth Zoom AI Team",
+  "author": "Qwen3-Coder Team",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.0"

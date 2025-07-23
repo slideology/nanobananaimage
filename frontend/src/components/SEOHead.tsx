@@ -10,16 +10,16 @@ interface SEOHeadProps {
 }
 
 export const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'ZOOM EARTH AI - Intelligent Earth Zoom and Video Generation Tool',
-  description = 'Explore every corner of Earth with ZOOM EARTH AI. Our AI-driven technology enables you to create stunning earth zoom videos for education, presentations, and creative projects.',
-  image = 'https://earthzoomai.org/images/earth-zoom/social/og-image.jpg',
-  url = typeof window !== 'undefined' ? window.location.href : 'https://earthzoomai.org',
+  title = 'QWEN3 CODER - Intelligent Code Generation and Development Tool',
+  description = 'Transform your ideas into code with QWEN3 CODER. Our AI-driven technology enables you to create production-ready software for applications, websites, and enterprise solutions.',
+  image = 'https://qwen3coder.com/images/qwen3-coder/social/og-image.jpg',
+  url = typeof window !== 'undefined' ? window.location.href : 'https://qwen3coder.com',
   type = 'website',
   structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    'name': 'ZOOM EARTH AI',
-    'description': 'Intelligent Earth Zoom and Video Generation Tool',
+    'name': 'Qwen3-Coder',
+    'description': 'Intelligent Code Generation and Development Tool',
     'applicationCategory': 'MultimediaApplication',
     'operatingSystem': 'Web',
     'offers': {
@@ -29,8 +29,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     },
     'author': {
       '@type': 'Organization',
-      'name': 'ZOOM EARTH AI Team',
-      'url': 'https://earthzoomai.org'
+      'name': 'Qwen3-Coder Team',
+      'url': 'https://qwen3coder.com'
     }
   }
 }) => {
@@ -57,9 +57,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     setMetaTag('theme-color', '#0f172a');
     setMetaTag('robots', 'index, follow');
     setMetaTag('googlebot', 'index, follow');
-    setMetaTag('keywords', 'ZOOM EARTH AI, earth zoom, AI video generation, geographic visualization, satellite imagery, earth observation');
-    setMetaTag('author', 'ZOOM EARTH AI Team');
-    setMetaTag('copyright', 'ZOOM EARTH AI');
+    setMetaTag('keywords', 'QWEN3 CODER, code generation, AI programming, software development, automated coding, intelligent programming');
+    setMetaTag('author', 'Qwen3-Coder Team');
+    setMetaTag('copyright', 'Qwen3-Coder');
 
     // Set Open Graph tags
     setMetaTag('og:title', title, true);
@@ -67,11 +67,11 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     setMetaTag('og:image', image, true);
     setMetaTag('og:url', url, true);
     setMetaTag('og:type', type, true);
-    setMetaTag('og:site_name', 'ZOOM EARTH AI', true);
+    setMetaTag('og:site_name', 'Qwen3-Coder', true);
 
     // Set Twitter Card tags
     setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:site', '@ZoomEarthAI');
+    setMetaTag('twitter:site', '@Qwen3Coder');
     setMetaTag('twitter:title', title);
     setMetaTag('twitter:description', description);
     setMetaTag('twitter:image', image);
@@ -103,4 +103,4 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   return null; // This component doesn't render any content
 };
 
-export default SEOHead; 
+export default SEOHead;

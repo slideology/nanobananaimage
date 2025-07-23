@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
  * 
  * 功能：
  * 1. 动态加载推特嵌入脚本
- * 2. 展示用户对ZOOM EARTH AI的推特反馈
+ * 2. 展示用户对Qwen3-Coder的推特反馈
  * 3. 提供社交媒体互动入口
  */
 const TwitterEmbeds: React.FC = () => {
@@ -32,10 +32,10 @@ const TwitterEmbeds: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Share Your Experience with ZOOM EARTH AI
+            Share Your Experience with Qwen3-Coder
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Love using ZOOM EARTH AI? See what our users are saying on Twitter with #ZoomEarthAI!
+            Love using Qwen3-Coder? See what our users are saying on Twitter with #Qwen3Coder!
           </p>
         </div>
 
@@ -54,7 +54,7 @@ const TwitterEmbeds: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              "ZOOM EARTH AI has revolutionized how we teach scale and perspective in our geography classes. Students are absolutely mesmerized by the zoom-out effects! #ZoomEarthAI #EdTech"
+              "Qwen3-Coder has revolutionized how we teach programming concepts in our computer science classes. Students are absolutely amazed by the AI-generated code examples! #Qwen3Coder #EdTech"
             </p>
             <div className="flex items-center space-x-4 text-gray-400 text-sm">
               <span>💙 127</span>
@@ -75,7 +75,7 @@ const TwitterEmbeds: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              "Just created the most amazing video sequence with ZOOM EARTH AI! From a close-up of my artwork to seeing Earth from space - mind blown! 🤯 #ZoomEarthAI #DigitalArt"
+              "Just created the most amazing application with Qwen3-Coder! From a simple idea to a fully functional app - mind blown! 🤯 #Qwen3Coder #Programming"
             </p>
             <div className="flex items-center space-x-4 text-gray-400 text-sm">
               <span>💙 89</span>
@@ -96,7 +96,7 @@ const TwitterEmbeds: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              "Our latest campaign video using ZOOM EARTH AI got 300% more engagement than usual! The zoom-out effect is absolutely captivating. Game changer! #ZoomEarthAI #Marketing"
+              "Our latest application built with Qwen3-Coder got 300% more user engagement than usual! The AI-generated features are absolutely amazing. Game changer! #Qwen3Coder #Development"
             </p>
             <div className="flex items-center space-x-4 text-gray-400 text-sm">
               <span>💙 156</span>
@@ -108,10 +108,10 @@ const TwitterEmbeds: React.FC = () => {
 
         {/* 社交媒体行动号召 */}
         <div className="text-center mt-12">
-          <p className="text-gray-300 mb-6">Join the conversation and share your ZOOM EARTH AI creations!</p>
+          <p className="text-gray-300 mb-6">Join the conversation and share your Qwen3-Coder creations!</p>
           <div className="flex justify-center space-x-4">
             <a 
-              href="https://twitter.com/intent/tweet?text=Check%20out%20my%20amazing%20zoom%20video%20created%20with%20ZOOM%20EARTH%20AI!%20%23ZoomEarthAI" 
+              href="https://twitter.com/intent/tweet?text=Check%20out%20my%20amazing%20code%20generated%20with%20Qwen3-Coder!%20%23Qwen3Coder" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300"
@@ -119,12 +119,12 @@ const TwitterEmbeds: React.FC = () => {
               Share on Twitter
             </a>
             <a 
-              href="https://twitter.com/search?q=%23ZoomEarthAI" 
+              href="https://twitter.com/search?q=%23Qwen3Coder" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300"
             >
-              View #ZoomEarthAI
+              View #Qwen3Coder
             </a>
           </div>
         </div>

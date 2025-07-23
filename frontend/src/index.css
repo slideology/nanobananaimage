@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ZOOM EARTH AI Global Styles */
+/* Qwen3-Coder Global Styles */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -43,7 +43,7 @@
   }
 }
 
-/* ZOOM EARTH AI Component Styles */
+/* Qwen3-Coder Component Styles */
 @layer components {
   /* 主按钮样式 */
   .btn-primary {
@@ -80,7 +80,7 @@
     @apply max-w-7xl mx-auto px-4;
   }
   
-  /* ZOOM EARTH AI Animation Effects */
+  /* Qwen3-Coder Animation Effects */
   .float-animation {
     animation: float 6s ease-in-out infinite;
   }
@@ -162,6 +162,54 @@
   
   .section-spacing {
     @apply py-16; /* 移动端减少垂直间距 */
+  }
+  
+  /* 移动端文字大小调整 */
+  .hero-title {
+    @apply text-4xl;
+  }
+  
+  .hero-subtitle {
+    @apply text-lg;
+  }
+}
+
+@media (max-width: 640px) {
+  .container-max {
+    @apply px-2;
+  }
+  
+  .btn-primary, .btn-secondary {
+    @apply px-4 py-2 text-base;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-title {
+    @apply text-6xl;
+  }
+  
+  .hero-subtitle {
+    @apply text-xl;
+  }
+}
+
+/* 减少动画偏好设置 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .float-animation,
+  .animate-float,
+  .pulse-glow {
+    animation: none !important;
   }
 }
 

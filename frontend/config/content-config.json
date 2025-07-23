@@ -1,0 +1,302 @@
+{
+  "hero": {
+    "title": "Qwen3-Coder",
+    "subtitle": "下一代AI编程助手，让代码生成变得简单高效。从需求到实现，只需几秒钟。",
+    "description": "体验革命性的AI代码生成技术。输入您的需求，观看我们如何将想法转化为生产就绪的代码，从概念到部署一步到位。",
+    "primaryCta": {
+      "text": "立即开始编程",
+      "link": "https://qwen3coder.com/try",
+      "style": "primary"
+    },
+    "secondaryCta": {
+      "text": "查看代码示例",
+      "link": "#showcase",
+      "style": "secondary"
+    },
+    "backgroundImage": "/images/backgrounds/code-hero.webp",
+    "badges": [
+      "秒级代码生成",
+      "AI驱动",
+      "50+编程语言",
+      "企业级安全"
+    ]
+  },
+  "features": {
+    "title": "强大功能特性",
+    "subtitle": "构建生产级代码所需的一切功能",
+    "items": [
+      {
+        "id": "intelligent-code-generation",
+        "title": "智能代码生成",
+        "description": "从简单需求到完整实现，智能代码生成技术加速您的开发流程，提供高质量、可维护的代码解决方案。",
+        "icon": "code",
+        "image": "/images/showcase/code-generation.webp",
+        "benefits": [
+          "自然语言转代码",
+          "智能架构设计",
+          "最佳实践集成"
+        ]
+      },
+      {
+        "id": "multi-language-support",
+        "title": "多语言支持",
+        "description": "支持50+编程语言，包括Python、JavaScript、Java、Go、Rust等，满足不同技术栈的开发需求。",
+        "icon": "globe",
+        "image": "/images/showcase/multi-language.webp",
+        "benefits": [
+          "50+编程语言",
+          "跨平台框架",
+          "语言特性优化"
+        ]
+      },
+      {
+        "id": "agentic-programming",
+        "title": "Agentic编程",
+        "description": "具备多轮交互、智能规划和自主决策能力的AI编程助手，能够理解复杂需求并提供最优解决方案。",
+        "icon": "brain",
+        "image": "/images/showcase/agentic-programming.webp",
+        "benefits": [
+          "多轮对话交互",
+          "智能任务规划",
+          "自主问题解决"
+        ]
+      },
+      {
+        "id": "long-context-understanding",
+        "title": "长上下文理解",
+        "description": "支持256K tokens的长上下文，可扩展至1M tokens，能够理解和处理大型项目的完整代码库。",
+        "icon": "file-text",
+        "image": "/images/showcase/long-context.webp",
+        "benefits": [
+          "256K tokens支持",
+          "完整项目理解",
+          "上下文关联分析"
+        ]
+      },
+      {
+        "id": "ide-integration",
+        "title": "IDE深度集成",
+        "description": "无缝集成VS Code、IntelliJ、Vim等主流IDE，提供插件、API和命令行工具，融入您的开发工作流。",
+        "icon": "monitor",
+        "image": "/images/showcase/ide-integration.webp",
+        "benefits": [
+          "主流IDE支持",
+          "插件生态",
+          "工作流集成"
+        ]
+      },
+      {
+        "id": "enterprise-security",
+        "title": "企业级安全",
+        "description": "SOC 2 Type II合规，AES-256加密，代码隐私保护，支持本地部署，满足企业级安全要求。",
+        "icon": "shield",
+        "image": "/images/showcase/enterprise-security.webp",
+        "benefits": [
+          "SOC 2合规",
+          "代码隐私保护",
+          "本地部署选项"
+        ]
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Qwen3-Coder实战演示",
+    "subtitle": "探索我们社区创建的精彩代码解决方案",
+    "items": [
+      {
+        "id": "showcase-1",
+        "title": "全栈Web应用生成",
+        "description": "从需求描述到完整的React + Node.js应用，包含前端界面、后端API和数据库设计。",
+        "codeUrl": "/demos/fullstack-app",
+        "thumbnailUrl": "/images/showcase/fullstack-app-thumb.webp",
+        "complexity": "高级",
+        "category": "全栈开发",
+        "tags": ["React", "Node.js", "MongoDB", "REST API"]
+      },
+      {
+        "id": "showcase-2",
+        "title": "AI算法实现",
+        "description": "从算法描述到完整的机器学习模型实现，包含数据预处理、模型训练和推理代码。",
+        "codeUrl": "/demos/ml-algorithm",
+        "thumbnailUrl": "/images/showcase/ml-algorithm-thumb.webp",
+        "complexity": "专家级",
+        "category": "人工智能",
+        "tags": ["Python", "TensorFlow", "深度学习", "数据科学"]
+      },
+      {
+        "id": "showcase-3",
+        "title": "微服务架构",
+        "description": "设计并实现完整的微服务架构，包含服务发现、负载均衡、容器化部署配置。",
+        "codeUrl": "/demos/microservices",
+        "thumbnailUrl": "/images/showcase/microservices-thumb.webp",
+        "complexity": "高级",
+        "category": "系统架构",
+        "tags": ["Go", "Docker", "Kubernetes", "gRPC"]
+      },
+      {
+        "id": "showcase-4",
+        "title": "移动应用开发",
+        "description": "跨平台移动应用开发，从UI设计到原生功能集成，一站式解决方案。",
+        "codeUrl": "/demos/mobile-app",
+        "thumbnailUrl": "/images/showcase/mobile-app-thumb.webp",
+        "complexity": "中级",
+        "category": "移动开发",
+        "tags": ["Flutter", "Dart", "iOS", "Android"]
+      },
+      {
+        "id": "showcase-5",
+        "title": "区块链智能合约",
+        "description": "从概念到部署的完整智能合约开发，包含安全审计和测试用例。",
+        "codeUrl": "/demos/smart-contract",
+        "thumbnailUrl": "/images/showcase/smart-contract-thumb.webp",
+        "complexity": "专家级",
+        "category": "区块链",
+        "tags": ["Solidity", "Web3", "以太坊", "DeFi"]
+      },
+      {
+        "id": "showcase-6",
+        "title": "游戏引擎开发",
+        "description": "2D/3D游戏引擎核心功能实现，包含渲染管线、物理引擎和资源管理系统。",
+        "codeUrl": "/demos/game-engine",
+        "thumbnailUrl": "/images/showcase/game-engine-thumb.webp",
+        "complexity": "专家级",
+        "category": "游戏开发",
+        "tags": ["C++", "OpenGL", "Vulkan", "游戏引擎"]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "开发者真实评价",
+    "subtitle": "加入全球数万名满意的开发者和技术团队",
+    "items": [
+      {
+        "id": "testimonial-1",
+        "name": "张伟",
+        "role": "高级软件工程师",
+        "company": "字节跳动",
+        "avatar": "/images/avatars/zhang-wei.webp",
+        "content": "Qwen3-Coder彻底改变了我的编程方式。从需求分析到代码实现，它能理解复杂的业务逻辑并生成高质量的代码。现在我可以专注于架构设计而不是重复性编码工作。",
+        "rating": 5,
+        "featured": true
+      },
+      {
+        "id": "testimonial-2",
+        "name": "Lisa Johnson",
+        "role": "技术总监",
+        "company": "Microsoft",
+        "avatar": "/images/avatars/lisa-johnson.webp",
+        "content": "团队使用Qwen3-Coder后，开发效率提升了300%。它不仅能生成代码，还能提供最佳实践建议和安全性检查。这是我见过最智能的编程助手。",
+        "rating": 5,
+        "featured": true
+      },
+      {
+        "id": "testimonial-3",
+        "name": "Alex Chen",
+        "role": "全栈开发者",
+        "company": "独立开发者",
+        "avatar": "/images/avatars/alex-chen.webp",
+        "content": "作为独立开发者，Qwen3-Coder就像拥有了一个专业的开发团队。它帮我快速原型开发，从前端到后端，从数据库设计到API实现，一应俱全。",
+        "rating": 5,
+        "featured": false
+      },
+      {
+        "id": "testimonial-4",
+        "name": "Sarah Kim",
+        "role": "AI研究员",
+        "company": "OpenAI",
+        "avatar": "/images/avatars/sarah-kim.webp",
+        "content": "Qwen3-Coder的Agentic能力令人印象深刻。它能进行多轮对话，理解上下文，甚至能自主解决复杂的技术问题。这代表了AI编程助手的未来。",
+        "rating": 5,
+        "featured": false
+      },
+      {
+        "id": "testimonial-5",
+        "name": "Roberto Silva",
+        "role": "DevOps工程师",
+        "company": "Netflix",
+        "avatar": "/images/avatars/roberto-silva.webp",
+        "content": "在微服务架构和容器化部署方面，Qwen3-Coder提供的解决方案非常专业。它理解现代DevOps实践，生成的配置文件和脚本都符合生产环境标准。",
+        "rating": 5,
+        "featured": true
+      },
+      {
+        "id": "testimonial-6",
+        "name": "田中太郎",
+        "role": "移动应用开发负责人",
+        "company": "Sony Interactive",
+        "avatar": "/images/avatars/tanaka-taro.webp",
+        "content": "跨平台移动开发从未如此简单。Qwen3-Coder不仅支持Flutter和React Native，还能针对不同平台优化性能。我们的应用发布周期缩短了50%。",
+        "rating": 5,
+        "featured": false
+      }
+    ]
+  },
+  "faq": {
+    "title": "常见问题解答",
+    "subtitle": "关于Qwen3-Coder您需要了解的一切",
+    "items": [
+      {
+        "id": "what-is-qwen3-coder",
+        "question": "什么是Qwen3-Coder？",
+        "answer": "Qwen3-Coder是阿里巴巴推出的下一代AI编程助手，基于Qwen3大模型架构。它具备强大的代码生成、理解和优化能力，支持50+编程语言，能够进行多轮对话交互，帮助开发者从需求分析到代码实现的全流程开发。"
+      },
+      {
+        "id": "agentic-capabilities",
+        "question": "什么是Agentic编程能力？",
+        "answer": "Agentic编程是Qwen3-Coder的核心特性，它具备自主思考、规划和决策能力。可以进行多轮对话，理解复杂需求，自主分解任务，调用工具和API，甚至能够自我纠错和优化。这使得它不仅是代码生成器，更是智能的编程伙伴。"
+      },
+      {
+        "id": "supported-languages",
+        "question": "支持哪些编程语言和框架？",
+        "answer": "Qwen3-Coder支持50+编程语言，包括Python、JavaScript、TypeScript、Java、C++、Go、Rust、Swift、Kotlin等。同时支持主流框架如React、Vue、Angular、Django、Spring Boot、Express.js、Flutter、React Native等，以及云原生技术栈。"
+      },
+      {
+        "id": "context-length",
+        "question": "长上下文能力有多强？",
+        "answer": "Qwen3-Coder支持256K tokens的长上下文，可扩展至1M tokens。这意味着它能够理解和处理大型项目的完整代码库，保持上下文一致性，进行跨文件的代码分析和重构，真正理解项目的整体架构。"
+      },
+      {
+        "id": "ide-integration",
+        "question": "如何与现有开发环境集成？",
+        "answer": "Qwen3-Coder提供多种集成方式：VS Code插件、IntelliJ IDEA插件、Vim/Neovim插件、命令行工具Qwen Code、REST API和SDK。支持与GitHub Copilot、Claude Code等工具协同使用，无缝融入您的开发工作流。"
+      },
+      {
+        "id": "enterprise-security",
+        "question": "企业级安全性如何保障？",
+        "answer": "Qwen3-Coder符合SOC 2 Type II标准，采用AES-256加密，支持本地部署和私有云部署。代码隐私得到严格保护，不会用于模型训练。提供审计日志、访问控制、数据驻留等企业级安全功能。"
+      },
+      {
+        "id": "pricing-model",
+        "question": "定价模式是怎样的？",
+        "answer": "我们提供灵活的定价方案：免费版本提供基础功能，个人专业版适合独立开发者，团队版支持协作功能，企业版提供定制化服务和本地部署。所有版本都包含核心AI编程能力，按使用量或订阅模式计费。"
+      },
+      {
+        "id": "code-quality",
+        "question": "生成代码的质量如何保证？",
+        "answer": "Qwen3-Coder通过Agent RL技术优化，在SWE-Bench Verified等权威基准测试中表现卓越。生成的代码遵循最佳实践，包含完整的错误处理、安全检查、性能优化和详细注释。支持代码审查、测试用例生成和重构建议。"
+      }
+    ]
+  },
+  "cta": {
+    "title": "准备好革新您的编程体验了吗？",
+    "subtitle": "加入全球数万名开发者，体验AI编程的无限可能",
+    "description": "立即开始您的Qwen3-Coder之旅，体验下一代AI编程助手的强大能力。免费试用，无需信用卡。",
+    "primaryButton": {
+      "text": "立即免费试用",
+      "link": "https://qwen3coder.com/try",
+      "style": "primary"
+    },
+    "secondaryButton": {
+      "text": "查看定价方案",
+      "link": "/pricing",
+      "style": "secondary"
+    },
+    "features": [
+      "免费试用额度",
+      "50+编程语言支持",
+      "企业级安全保障",
+      "7x24小时技术支持"
+    ],
+    "backgroundImage": "/images/backgrounds/cta-bg.webp"
+  }
+}

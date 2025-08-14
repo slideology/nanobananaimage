@@ -54,7 +54,7 @@ const AffiliateBanner: React.FC = () => {
         
         {/* Call to action button */}
         <a 
-          href="https://pollo.ai?ref=ytayndd" 
+          href="https://pollo.ai/ai-image-generator?ref=ytayndd" 
           className="bg-white text-purple-600 hover:bg-gray-100 transition-colors duration-300 px-4 py-1.5 rounded-full font-medium text-sm shadow-sm"
           target="_blank" 
           rel="noopener noreferrer"

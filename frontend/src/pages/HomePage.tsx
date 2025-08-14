@@ -48,12 +48,14 @@ const HomePage: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <Link
-                to="/analysis"
+              <a
+                href="https://pollo.ai/ai-image-generator?ref=ytayndd"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-amber-500 rounded-lg hover:from-purple-700 hover:to-amber-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Explore Analysis
-              </Link>
+              </a>
               <Link
                 to="/capabilities"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-purple-400 border-2 border-purple-400 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
@@ -397,18 +399,22 @@ const HomePage: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
-                to="/analysis"
+              <a
+                href="https://pollo.ai/ai-image-generator?ref=ytayndd"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-amber-500 rounded-lg hover:from-purple-700 hover:to-amber-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Technical Analysis
-              </Link>
-              <Link
-                to="/capabilities"
+              </a>
+              <a
+                href="https://pollo.ai/ai-image-generator?ref=ytayndd"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-purple-400 border-2 border-purple-400 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
               >
                 See Capabilities
-              </Link>
+              </a>
             </div>
 
             <div className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-slate-400">

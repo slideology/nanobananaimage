@@ -164,7 +164,7 @@ const Header = () => {
           {/* User actions area */}
           <div className="hidden md:flex items-center space-x-4">
             <a 
-              href="https://pollo.ai?ref=ytayndd"
+              href="https://pollo.ai/ai-image-generator?ref=ytayndd"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
@@ -234,7 +234,7 @@ const Header = () => {
               ))}
               <div className="flex flex-col space-y-2 pt-2">
                 <a 
-                  href="https://pollo.ai?ref=ytayndd"
+                  href="https://pollo.ai/ai-image-generator?ref=ytayndd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 text-left"

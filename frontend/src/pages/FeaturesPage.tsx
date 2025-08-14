@@ -318,7 +318,7 @@ const FeaturesPage: React.FC = () => {
                   View Demo <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a 
-                  href="https://pollo.ai?ref=ytayndd"
+                  href="https://pollo.ai/ai-image-generator?ref=ytayndd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border border-gray-600 hover:border-blue-400 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-blue-600/10"
@@ -462,7 +462,7 @@ const FeaturesPage: React.FC = () => {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a 
-                  href="https://pollo.ai?ref=ytayndd"
+                  href="https://pollo.ai/ai-image-generator?ref=ytayndd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2"

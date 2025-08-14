@@ -10,15 +10,15 @@ interface SEOHeadProps {
 }
 
 export const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'QWEN3 CODER - Intelligent Code Generation and Development Tool',
-  description = 'Transform your ideas into code with QWEN3 CODER. Our AI-driven technology enables you to create production-ready software for applications, websites, and enterprise solutions.',
-  image = 'https://qwen3coder.com/images/qwen3-coder/social/og-image.jpg',
-  url = typeof window !== 'undefined' ? window.location.href : 'https://qwen3coder.com',
+  title = 'NANO BANANA AI - Google Unreleased Image Generation Model Analysis',
+  description = 'Explore comprehensive analysis of Google\'s unreleased Nano Banana AI image generation model. Technical insights, performance benchmarks, and research findings.',
+  image = 'https://nanobananaimage.org/images/nano-banana-ai/social/og-image.jpg',
+  url = typeof window !== 'undefined' ? window.location.href : 'https://nanobananaimage.org',
   type = 'website',
   structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    'name': 'Qwen3-Coder',
+    'name': 'Nano Banana AI',
     'description': 'Intelligent Code Generation and Development Tool',
     'applicationCategory': 'MultimediaApplication',
     'operatingSystem': 'Web',
@@ -29,8 +29,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     },
     'author': {
       '@type': 'Organization',
-      'name': 'Qwen3-Coder Team',
-      'url': 'https://qwen3coder.com'
+      'name': 'Nano Banana AI Research Team',
+    'url': 'https://nanobananaimage.org'
     }
   }
 }) => {
@@ -57,9 +57,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     setMetaTag('theme-color', '#0f172a');
     setMetaTag('robots', 'index, follow');
     setMetaTag('googlebot', 'index, follow');
-    setMetaTag('keywords', 'QWEN3 CODER, code generation, AI programming, software development, automated coding, intelligent programming');
-    setMetaTag('author', 'Qwen3-Coder Team');
-    setMetaTag('copyright', 'Qwen3-Coder');
+    setMetaTag('keywords', 'NANO BANANA AI, Google AI, image generation, neural networks, machine learning, AI research, model analysis');
+  setMetaTag('author', 'Nano Banana AI Research Team');
+  setMetaTag('copyright', 'Nano Banana AI');
 
     // Set Open Graph tags
     setMetaTag('og:title', title, true);
@@ -67,11 +67,11 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     setMetaTag('og:image', image, true);
     setMetaTag('og:url', url, true);
     setMetaTag('og:type', type, true);
-    setMetaTag('og:site_name', 'Qwen3-Coder', true);
+    setMetaTag('og:site_name', 'Nano Banana AI', true);
 
     // Set Twitter Card tags
     setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:site', '@Qwen3Coder');
+    setMetaTag('twitter:site', '@NanoBananaAI');
     setMetaTag('twitter:title', title);
     setMetaTag('twitter:description', description);
     setMetaTag('twitter:image', image);

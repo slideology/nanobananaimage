@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# Qwen3-Coder 部署脚本
-# 使用方法: ./scripts/deploy.sh [环境]
-# 环境选项: staging | production
+# Nano Banana AI Deployment Script
+# Usage: ./scripts/deploy.sh [environment]
+# Environment options: staging | production
 
-set -e  # 遇到错误立即退出
+set -e  # Exit immediately on error
 
-# 颜色定义
+# Color definitions
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# 打印带颜色的消息
+# Print colored messages
 print_message() {
     echo -e "${2}[$(date +'%Y-%m-%d %H:%M:%S')] $1${NC}"
 }
@@ -34,91 +34,91 @@ print_info() {
     print_message "$1" "$BLUE"
 }
 
-# 检查参数
+# Check parameters
 ENVIRONMENT=${1:-staging}
 
 if [[ "$ENVIRONMENT" != "staging" && "$ENVIRONMENT" != "production" ]]; then
-    print_error "错误: 无效的环境参数。请使用 'staging' 或 'production'"
+    print_error "Error: Invalid environment parameter. Please use 'staging' or 'production'"
     exit 1
 fi
 
-print_info "开始部署到 $ENVIRONMENT 环境..."
+print_info "Starting deployment to $ENVIRONMENT environment..."
 
-# 检查必要的工具
-print_info "检查必要工具..."
+# Check required tools
+print_info "Checking required tools..."
 if ! command -v node &> /dev/null; then
-    print_error "Node.js 未安装"
+    print_error "Node.js is not installed"
     exit 1
 fi
 
 if ! command -v npm &> /dev/null; then
-    print_error "npm 未安装"
+    print_error "npm is not installed"
     exit 1
 fi
 
-# 进入前端目录
+# Enter frontend directory
 cd frontend
 
-# 安装依赖
-print_info "安装依赖..."
+# Install dependencies
+print_info "Installing dependencies..."
 npm ci
 
-# 运行测试（如果有）
-print_info "运行测试..."
-# npm run test 2>/dev/null || print_warning "没有找到测试脚本"
+# Run tests (if available)
+print_info "Running tests..."
+# npm run test 2>/dev/null || print_warning "No test script found"
 
-# 构建项目
-print_info "构建项目..."
+# Build project
+print_info "Building project..."
 npm run build
 
 if [ $? -ne 0 ]; then
-    print_error "构建失败"
+    print_error "Build failed"
     exit 1
 fi
 
-print_success "构建完成"
+print_success "Build completed"
 
-# 检查构建产物
+# Check build artifacts
 if [ ! -d "dist" ]; then
-    print_error "构建产物目录不存在"
+    print_error "Build artifacts directory does not exist"
     exit 1
 fi
 
-print_info "构建产物大小:"
+print_info "Build artifacts size:"
 du -sh dist/
 
-# 根据环境执行不同的部署逻辑
+# Execute different deployment logic based on environment
 if [ "$ENVIRONMENT" = "production" ]; then
-    print_info "部署到生产环境..."
+    print_info "Deploying to production environment..."
     
-    # 这里可以添加生产环境的部署逻辑
-    # 例如：上传到服务器、更新CDN等
+    # Production deployment logic can be added here
+    # For example: upload to server, update CDN, etc.
     
-    print_warning "生产环境部署逻辑需要根据实际服务器配置进行设置"
-    print_info "构建产物位于: frontend/dist/"
-    print_info "请将 dist/ 目录的内容上传到您的生产服务器"
+    print_warning "Production deployment logic needs to be configured based on actual server setup"
+    print_info "Build artifacts located at: frontend/dist/"
+    print_info "Please upload the contents of dist/ directory to your production server"
     
 elif [ "$ENVIRONMENT" = "staging" ]; then
-    print_info "部署到测试环境..."
+    print_info "Deploying to staging environment..."
     
-    # 这里可以添加测试环境的部署逻辑
+    # Staging deployment logic can be added here
     
-    print_warning "测试环境部署逻辑需要根据实际配置进行设置"
-    print_info "构建产物位于: frontend/dist/"
+    print_warning "Staging deployment logic needs to be configured based on actual setup"
+    print_info "Build artifacts located at: frontend/dist/"
 fi
 
-print_success "部署完成！"
+print_success "Deployment completed!"
 
-# 输出部署信息
-print_info "部署信息:"
-print_info "- 环境: $ENVIRONMENT"
-print_info "- 构建时间: $(date)"
-print_info "- 构建产物: frontend/dist/"
+# Output deployment information
+print_info "Deployment Information:"
+print_info "- Environment: $ENVIRONMENT"
+print_info "- Build Time: $(date)"
+print_info "- Build Artifacts: frontend/dist/"
 
 if [ "$ENVIRONMENT" = "production" ]; then
-    print_info "- 生产环境URL: https://qwen3coder.com"
+    print_info "- Production URL: https://nanobananaimage.org"
 else
-    print_info "- 测试环境URL: 请根据实际配置设置"
+    print_info "- Staging URL: Please configure based on actual setup"
 fi
 
-print_success "🎉 部署流程完成！"
+print_success "🎉 Deployment process completed!"

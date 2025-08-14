@@ -2,23 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Qwen3-Coder Global Styles */
+/* Nano Banana AI Global Styles */
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* 为固定导航栏留出空间 */
+    scroll-padding-top: 80px; /* Leave space for fixed navigation bar */
   }
   
   body {
     @apply bg-gray-950 text-gray-100 font-sans;
-    overflow-x: hidden; /* 防止水平滚动 */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-sans font-bold;
   }
   
-  /* 自定义滚动条样式 */
+  /* Custom scrollbar styles */
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -36,51 +36,51 @@
     background: #2563eb;
   }
   
-  /* Firefox 滚动条样式 */
+  /* Firefox scrollbar styles */
   * {
     scrollbar-width: thin;
     scrollbar-color: #3b82f6 #1f2937;
   }
 }
 
-/* Qwen3-Coder Component Styles */
+/* Nano Banana AI Component Styles */
 @layer components {
-  /* 主按钮样式 */
+  /* Primary button styles */
   .btn-primary {
     @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg shadow-md hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-sans font-medium transform hover:scale-105;
   }
   
-  /* 次要按钮样式 */
+  /* Secondary button styles */
   .btn-secondary {
     @apply px-6 py-3 bg-transparent border-2 border-blue-500 text-blue-400 rounded-lg shadow-sm hover:bg-blue-500/10 transition-all duration-300 font-sans font-medium;
   }
   
-  /* 卡片样式 */
+  /* Card styles */
   .card {
     @apply bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700 hover:shadow-lg hover:bg-gray-700 transition-all duration-300;
   }
   
-  /* 输入框样式 */
+  /* Input field styles */
   .input-field {
     @apply w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent;
   }
   
-  /* 渐变文字效果 */
+  /* Gradient text effect */
   .text-gradient {
     @apply bg-clip-text text-transparent;
   }
   
-  /* 区块间距优化 */
+  /* Section spacing optimization */
   .section-spacing {
     @apply py-24 relative;
   }
   
-  /* 容器最大宽度 */
+  /* Container max width */
   .container-max {
     @apply max-w-7xl mx-auto px-4;
   }
   
-  /* Qwen3-Coder Animation Effects */
+  /* Nano Banana AI Animation Effects */
   .float-animation {
     animation: float 6s ease-in-out infinite;
   }
@@ -89,41 +89,41 @@
     animation: float 6s ease-in-out infinite;
   }
   
-  /* 淡入动画 */
+  /* Fade in animation */
   .fade-in {
     animation: fadeIn 0.8s ease-out;
   }
   
-  /* 滑入动画 */
+  /* Slide in animation */
   .slide-in-up {
     animation: slideInUp 0.8s ease-out;
   }
   
-  /* 脉冲动画 */
+  /* Pulse animation */
   .pulse-glow {
     animation: pulseGlow 2s ease-in-out infinite;
   }
   
-  /* 滚动进入视口动画 */
+  /* Scroll into viewport animation */
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
   }
   
-  /* 初始状态隐藏 */
+  /* Initial state hidden */
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   
-  /* 激活状态 */
+  /* Active state */
   .animate-on-scroll.animate-fade-in-up {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* 动画关键帧 */
+/* Animation keyframes */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -154,17 +154,17 @@
   }
 }
 
-/* 响应式优化 */
+/* Responsive optimization */
 @media (max-width: 768px) {
   html {
-    scroll-padding-top: 70px; /* 移动端导航栏高度调整 */
+    scroll-padding-top: 70px; /* Mobile navigation bar height adjustment */
   }
   
   .section-spacing {
-    @apply py-16; /* 移动端减少垂直间距 */
+    @apply py-16; /* Reduce vertical spacing on mobile */
   }
   
-  /* 移动端文字大小调整 */
+  /* Mobile text size adjustment */
   .hero-title {
     @apply text-4xl;
   }
@@ -184,7 +184,7 @@
   }
 }
 
-/* 平板设备优化 */
+/* Tablet device optimization */
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero-title {
     @apply text-6xl;
@@ -195,7 +195,7 @@
   }
 }
 
-/* 减少动画偏好设置 */
+/* Reduced motion preference settings */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -213,7 +213,7 @@
   }
 }
 
-/* 滚动指示器样式 */
+/* Scroll indicator styles */
 .scroll-indicator {
   position: fixed;
   top: 0;
@@ -225,7 +225,7 @@
   z-index: 9999;
 }
 
-/* 返回顶部按钮样式 */
+/* Back to top button styles */
 .back-to-top {
   @apply fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 flex items-center justify-center z-50;
   opacity: 0;
@@ -237,4 +237,14 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+/* Float animation for particles */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
 }

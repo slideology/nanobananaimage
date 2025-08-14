@@ -20,9 +20,9 @@ const CodeDemoComponent: React.FC = () => {
   const [displayedCode, setDisplayedCode] = useState<string>('');
   const [copiedStates, setCopiedStates] = useState<{[key: string]: boolean}>({});
 
-  // 代码示例数据
+  // Code example data
   const codeExamples: CodeExample[] = [
-    // 实时代码生成演示
+    // Real-time code generation demo
     {
       id: 'react-component',
       title: 'React Todo Component',
@@ -219,7 +219,7 @@ if __name__ == "__main__":
       complexity: 'Advanced',
       category: 'generation'
     },
-    // 多语言支持展示
+    // Multi-language support showcase
     {
       id: 'go-microservice',
       title: 'Go Microservice',
@@ -430,7 +430,7 @@ func main() {
       complexity: 'Expert',
       category: 'multilang'
     },
-    // Agentic能力演示
+    // Agentic capabilities demonstration
     {
       id: 'agentic-planning',
       title: 'Multi-Step Project Planning',
@@ -611,7 +611,7 @@ console.log("Identified risks:", agent.identifyRisks());`,
       complexity: 'Expert',
       category: 'agentic'
     },
-    // 性能基准展示
+    // Performance benchmark showcase
     {
       id: 'performance-benchmark',
       title: 'Performance Optimization',
@@ -849,7 +849,7 @@ fn main() {
     }
   ];
 
-  // 演示类别配置
+  // Demo category configuration
   const demoCategories = [
     {
       id: 'generation',
@@ -881,12 +881,12 @@ fn main() {
     }
   ];
 
-  // 获取当前类别的示例
+  // Get examples for current category
   const getCurrentExamples = () => {
     return codeExamples.filter(example => example.category === activeDemo);
   };
 
-  // 打字机效果
+  // Typewriter effect
   useEffect(() => {
     const examples = getCurrentExamples();
     if (examples.length === 0) return;
@@ -904,12 +904,12 @@ fn main() {
         setIsTyping(false);
         clearInterval(timer);
       }
-    }, 20); // 调整打字速度
+    }, 20); // Adjust typing speed
 
     return () => clearInterval(timer);
   }, [activeDemo, currentExample]);
 
-  // 复制代码功能
+  // Copy code functionality
   const copyCode = async (code: string, exampleId: string) => {
     try {
       await navigator.clipboard.writeText(code);
@@ -927,7 +927,7 @@ fn main() {
 
   return (
     <div className="bg-gray-900 rounded-2xl p-8 border border-gray-700">
-      {/* 演示类别选择 */}
+      {/* Demo category selection */}
       <div className="mb-8">
         <h3 className="text-2xl font-bold text-white mb-6">Interactive Code Demonstrations</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -957,10 +957,10 @@ fn main() {
         </div>
       </div>
 
-      {/* 代码演示区域 */}
+      {/* Code demo area */}
       {currentExampleData && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* 左侧：示例信息和控制 */}
+          {/* Left side: Example info and controls */}
           <div>
             <div className="bg-gray-800 rounded-xl p-6 mb-6">
               <h4 className="text-xl font-bold text-white mb-2">{currentExampleData.title}</h4>
@@ -984,7 +984,7 @@ fn main() {
               </div>
             </div>
 
-            {/* 示例切换 */}
+            {/* Example switching */}
             {currentExamples.length > 1 && (
               <div className="flex gap-2 mb-4">
                 {currentExamples.map((_, index) => (
@@ -1003,7 +1003,7 @@ fn main() {
               </div>
             )}
 
-            {/* 控制按钮 */}
+            {/* Control buttons */}
             <div className="flex gap-3">
               <button
                 onClick={() => {
@@ -1029,7 +1029,7 @@ fn main() {
             </div>
           </div>
 
-          {/* 右侧：代码显示 */}
+          {/* Right side: Code display */}
           <div className="bg-gray-900 rounded-xl border border-gray-700 overflow-hidden">
             <div className="flex items-center justify-between px-4 py-3 bg-gray-800 border-b border-gray-700">
               <div className="flex items-center gap-2">

@@ -10,7 +10,7 @@ interface NewsletterSubscribeProps {
 export const NewsletterSubscribe: React.FC<NewsletterSubscribeProps> = ({
   className = '',
   title = 'Subscribe to Our Updates',
-  description = 'Get the latest features, tutorials, and tips from Qwen3-Coder.'
+  description = 'Get the latest research insights, analysis updates, and findings from Nano Banana AI.'
 }) => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');

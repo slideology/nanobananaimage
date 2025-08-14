@@ -3,11 +3,11 @@ import { useMediaQuery } from '../hooks/useResponsive';
 
 /**
  * Animation Enhancement Components
- * 动画增强组件集合，提供视差滚动、进入动画、悬停效果等
- * 支持Task 2.3的交互动画增强需求
+ * Animation enhancement component collection providing parallax scrolling, entrance animations, hover effects, etc.
+ * Supports Task 2.3 interactive animation enhancement requirements
  */
 
-// 视差滚动组件
+// Parallax scrolling component
 export const ParallaxContainer: React.FC<{
   children: React.ReactNode;
   speed?: number;
@@ -47,7 +47,7 @@ export const ParallaxContainer: React.FC<{
   );
 };
 
-// 滚动触发动画组件
+// Scroll-triggered animation component
 export const ScrollReveal: React.FC<{
   children: React.ReactNode;
   direction?: 'up' | 'down' | 'left' | 'right' | 'fade';
@@ -117,7 +117,7 @@ export const ScrollReveal: React.FC<{
   );
 };
 
-// 悬停效果组件
+// Hover effect component
 export const HoverEffect: React.FC<{
   children: React.ReactNode;
   effect?: 'scale' | 'lift' | 'glow' | 'rotate' | 'slide';
@@ -145,7 +145,7 @@ export const HoverEffect: React.FC<{
   );
 };
 
-// 脉冲动画组件
+// Pulse animation component
 export const PulseAnimation: React.FC<{
   children: React.ReactNode;
   color?: string;
@@ -180,7 +180,7 @@ export const PulseAnimation: React.FC<{
   );
 };
 
-// 打字机效果组件
+// Typewriter effect component
 export const TypewriterEffect: React.FC<{
   text: string;
   speed?: number;
@@ -221,7 +221,7 @@ export const TypewriterEffect: React.FC<{
   );
 };
 
-// 数字计数动画组件
+// Number counting animation component
 export const CountUpAnimation: React.FC<{
   end: number;
   start?: number;
@@ -280,7 +280,7 @@ export const CountUpAnimation: React.FC<{
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
       
-      // 使用缓动函数
+      // Use easing function
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const currentValue = startValue + (totalChange * easeOutQuart);
       
@@ -302,7 +302,7 @@ export const CountUpAnimation: React.FC<{
   );
 };
 
-// 浮动动画组件
+// Floating animation component
 export const FloatingAnimation: React.FC<{
   children: React.ReactNode;
   direction?: 'vertical' | 'horizontal' | 'both';

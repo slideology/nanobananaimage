@@ -2,11 +2,11 @@ import React from 'react';
 
 /**
  * Loading States Component
- * 加载状态组件，提供多种加载状态的UI展示
- * 包含骨架屏、加载动画、错误状态等，提升用户体验
+ * Loading state component providing various loading state UI displays
+ * Includes skeleton screens, loading animations, error states, etc., to enhance user experience
  */
 
-// 骨架屏组件
+// Skeleton component
 export const SkeletonLoader: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
     <div className={`animate-pulse ${className}`}>
@@ -17,7 +17,7 @@ export const SkeletonLoader: React.FC<{ className?: string }> = ({ className = '
   );
 };
 
-// 卡片骨架屏
+// Card skeleton
 export const CardSkeleton: React.FC = () => {
   return (
     <div className="bg-gray-800 rounded-xl p-6 animate-pulse">
@@ -32,7 +32,7 @@ export const CardSkeleton: React.FC = () => {
   );
 };
 
-// 加载旋转器
+// Loading spinner
 export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg'; className?: string }> = ({ 
   size = 'md', 
   className = '' 
@@ -49,7 +49,7 @@ export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg'; className?: s
         className="animate-spin text-blue-500" 
         fill="none" 
         viewBox="0 0 24 24"
-        aria-label="加载中"
+        aria-label="Loading"
       >
         <circle 
           className="opacity-25" 
@@ -69,7 +69,7 @@ export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg'; className?: s
   );
 };
 
-// 脉冲加载动画
+// Pulse loading animation
 export const PulseLoader: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
     <div className={`flex space-x-2 ${className}`}>
@@ -87,7 +87,7 @@ export const PulseLoader: React.FC<{ className?: string }> = ({ className = '' }
   );
 };
 
-// 进度条组件
+// Progress bar component
 export const ProgressBar: React.FC<{ 
   progress: number; 
   className?: string;
@@ -98,7 +98,7 @@ export const ProgressBar: React.FC<{
   return (
     <div className={`w-full ${className}`}>
       <div className="flex justify-between items-center mb-2">
-        <span className="text-sm text-gray-400">加载进度</span>
+        <span className="text-sm text-gray-400">Loading Progress</span>
         {showPercentage && (
           <span className="text-sm text-gray-400">{Math.round(clampedProgress)}%</span>
         )}
@@ -117,13 +117,13 @@ export const ProgressBar: React.FC<{
   );
 };
 
-// 错误状态组件
+// Error state component
 export const ErrorState: React.FC<{ 
   message?: string;
   onRetry?: () => void;
   className?: string;
 }> = ({ 
-  message = '加载失败，请重试', 
+  message = 'Loading failed, please try again', 
   onRetry,
   className = '' 
 }) => {
@@ -151,20 +151,20 @@ export const ErrorState: React.FC<{
           onClick={onRetry}
           className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
         >
-          重试
+          Retry
         </button>
       )}
     </div>
   );
 };
 
-// 空状态组件
+// Empty state component
 export const EmptyState: React.FC<{ 
   message?: string;
   action?: React.ReactNode;
   className?: string;
 }> = ({ 
-  message = '暂无数据', 
+  message = 'No data available', 
   action,
   className = '' 
 }) => {
@@ -192,11 +192,11 @@ export const EmptyState: React.FC<{
   );
 };
 
-// 页面加载覆盖层
+// Page loading overlay
 export const PageLoader: React.FC<{ 
   isLoading: boolean;
   message?: string;
-}> = ({ isLoading, message = '页面加载中...' }) => {
+}> = ({ isLoading, message = 'Page loading...' }) => {
   if (!isLoading) return null;
 
   return (
@@ -211,7 +211,7 @@ export const PageLoader: React.FC<{
   );
 };
 
-// 懒加载包装器
+// Lazy loading wrapper
 export const LazyWrapper: React.FC<{
   children: React.ReactNode;
   fallback?: React.ReactNode;

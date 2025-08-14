@@ -6,14 +6,16 @@ import SEOHead from './components/SEOHead';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import ShowcasePage from './pages/ShowcasePage';
-import FeaturesPage from './pages/FeaturesPage';
-import DocsPage from './pages/DocsPage';
+import AnalysisPage from './pages/AnalysisPage';
+import CapabilitiesPage from './pages/CapabilitiesPage';
+import BenchmarksPage from './pages/BenchmarksPage';
 import NotFoundPage from './pages/NotFoundPage';
 
-// 保留的页面引入
+// Retained page imports
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
 
 function App() {
   return (
@@ -24,20 +26,26 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/analysis" element={<AnalysisPage />} />
+          <Route path="/capabilities" element={<CapabilitiesPage />} />
+          <Route path="/benchmarks" element={<BenchmarksPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/features" element={<FeaturesPage />} />
-          <Route path="/showcase" element={<ShowcasePage />} />
-          <Route path="/docs" element={<DocsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           
-          {/* 博客功能保留 */}
+          {/* Blog functionality retained */}
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:postId" element={<BlogPostPage />} />
 
-          {/* 其他功能页面（如需要） */}
-          <Route path="/pricing" element={<div className="min-h-screen bg-gray-950 text-white flex items-center justify-center"><div className="text-center"><h1 className="text-4xl font-bold mb-4">Pricing</h1><p className="text-gray-400">Coming Soon</p></div></div>} />
-          <Route path="/privacy-policy" element={<div className="min-h-screen bg-gray-950 text-white flex items-center justify-center"><div className="text-center"><h1 className="text-4xl font-bold mb-4">Privacy Policy</h1><p className="text-gray-400">Coming Soon</p></div></div>} />
-          <Route path="/terms-of-service" element={<div className="min-h-screen bg-gray-950 text-white flex items-center justify-center"><div className="text-center"><h1 className="text-4xl font-bold mb-4">Terms of Service</h1><p className="text-gray-400">Coming Soon</p></div></div>} />
+          {/* Legacy redirects for SEO */}
+          <Route path="/features" element={<AnalysisPage />} />
+          <Route path="/showcase" element={<CapabilitiesPage />} />
+          <Route path="/docs" element={<BenchmarksPage />} />
+
+          {/* Placeholder pages */}
+          <Route path="/research" element={<div className="min-h-screen bg-slate-950 text-white flex items-center justify-center"><div className="text-center"><h1 className="text-4xl font-bold mb-4">Research Findings</h1><p className="text-slate-400">Coming Soon</p></div></div>} />
+          <Route path="/limitations" element={<div className="min-h-screen bg-slate-950 text-white flex items-center justify-center"><div className="text-center"><h1 className="text-4xl font-bold mb-4">Technical Limitations</h1><p className="text-slate-400">Coming Soon</p></div></div>} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
 
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

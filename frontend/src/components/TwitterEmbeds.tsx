@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 
 /**
- * TwitterEmbeds组件 - 嵌入推特内容展示用户反馈
+ * TwitterEmbeds Component - Embed Twitter content to display user feedback
  * 
- * 功能：
- * 1. 动态加载推特嵌入脚本
- * 2. 展示用户对Qwen3-Coder的推特反馈
- * 3. 提供社交媒体互动入口
+ * Features:
+ * 1. Dynamically load Twitter embed script
+ * 2. Display user Twitter feedback for Nano Banana AI
+ * 3. Provide social media interaction entry
  */
 const TwitterEmbeds: React.FC = () => {
   useEffect(() => {
-    // 动态加载推特嵌入脚本
+    // Dynamically load Twitter embed script
     const script = document.createElement('script');
     script.src = 'https://platform.twitter.com/widgets.js';
     script.async = true;
@@ -19,7 +19,7 @@ const TwitterEmbeds: React.FC = () => {
     document.head.appendChild(script);
     
     return () => {
-      // 清理脚本
+      // Clean up script
       const existingScript = document.querySelector('script[src="https://platform.twitter.com/widgets.js"]');
       if (existingScript) {
         document.head.removeChild(existingScript);
@@ -32,17 +32,17 @@ const TwitterEmbeds: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Share Your Experience with Qwen3-Coder
+            Share Your Experience with Nano Banana AI
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Love using Qwen3-Coder? See what our users are saying on Twitter with #Qwen3Coder!
+            Love using Nano Banana AI? See what our users are saying on Twitter with #NanoBananaAI!
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Twitter嵌入示例 - 实际使用时需要替换为真实的推特ID */}
+          {/* Twitter embed examples - Replace with real Twitter IDs in actual use */}
           
-          {/* 推特嵌入1 - 教育用户反馈 */}
+          {/* Twitter embed 1 - Educational user feedback */}
           <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
             <div className="flex items-start space-x-3 mb-4">
               <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
@@ -54,7 +54,7 @@ const TwitterEmbeds: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              "Qwen3-Coder has revolutionized how we teach programming concepts in our computer science classes. Students are absolutely amazed by the AI-generated code examples! #Qwen3Coder #EdTech"
+              "Nano Banana AI has revolutionized how we understand image generation models in our AI research. Students are absolutely amazed by the comprehensive analysis insights! #NanoBananaAI #AIResearch"
             </p>
             <div className="flex items-center space-x-4 text-gray-400 text-sm">
               <span>💙 127</span>
@@ -63,7 +63,7 @@ const TwitterEmbeds: React.FC = () => {
             </div>
           </div>
 
-          {/* 推特嵌入2 - 创作者反馈 */}
+          {/* Twitter embed 2 - Creator feedback */}
           <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
             <div className="flex items-start space-x-3 mb-4">
               <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
@@ -75,7 +75,7 @@ const TwitterEmbeds: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              "Just created the most amazing application with Qwen3-Coder! From a simple idea to a fully functional app - mind blown! 🤯 #Qwen3Coder #Programming"
+              "Just discovered the most amazing AI model insights with Nano Banana AI! From basic concepts to deep technical understanding - mind blown! 🤯 #NanoBananaAI #AIResearch"
             </p>
             <div className="flex items-center space-x-4 text-gray-400 text-sm">
               <span>💙 89</span>
@@ -84,7 +84,7 @@ const TwitterEmbeds: React.FC = () => {
             </div>
           </div>
 
-          {/* 推特嵌入3 - 营销专家反馈 */}
+          {/* Twitter embed 3 - Marketing expert feedback */}
           <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
             <div className="flex items-start space-x-3 mb-4">
               <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
@@ -96,7 +96,7 @@ const TwitterEmbeds: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              "Our latest application built with Qwen3-Coder got 300% more user engagement than usual! The AI-generated features are absolutely amazing. Game changer! #Qwen3Coder #Development"
+              "Our latest research paper using Nano Banana AI insights got 300% more citations than usual! The comprehensive analysis is absolutely amazing. Game changer! #NanoBananaAI #Research"
             </p>
             <div className="flex items-center space-x-4 text-gray-400 text-sm">
               <span>💙 156</span>
@@ -106,12 +106,12 @@ const TwitterEmbeds: React.FC = () => {
           </div>
         </div>
 
-        {/* 社交媒体行动号召 */}
+        {/* Social media call to action */}
         <div className="text-center mt-12">
-          <p className="text-gray-300 mb-6">Join the conversation and share your Qwen3-Coder creations!</p>
+          <p className="text-gray-300 mb-6">Join the conversation and share your Nano Banana AI research insights!</p>
           <div className="flex justify-center space-x-4">
             <a 
-              href="https://twitter.com/intent/tweet?text=Check%20out%20my%20amazing%20code%20generated%20with%20Qwen3-Coder!%20%23Qwen3Coder" 
+              href="https://twitter.com/intent/tweet?text=Check%20out%20my%20amazing%20AI%20research%20insights%20with%20Nano%20Banana%20AI!%20%23NanoBananaAI" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300"
@@ -119,12 +119,12 @@ const TwitterEmbeds: React.FC = () => {
               Share on Twitter
             </a>
             <a 
-              href="https://twitter.com/search?q=%23Qwen3Coder" 
+              href="https://twitter.com/search?q=%23NanoBananaAI" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300"
             >
-              View #Qwen3Coder
+              View #NanoBananaAI
             </a>
           </div>
         </div>

@@ -7,22 +7,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Qwen3-Coder 代码/技术主题配色方案  
-        'earth-blue': '#1e40af',      // 地球深蓝 - 海洋和大气层
-        'space-dark': '#0f172a',      // 太空深黑 - 宇宙背景
-        'cosmic-purple': '#7c3aed',   // 宇宙紫色 - 神秘太空
-        'solar-gold': '#f59e0b',      // 太阳金色 - 阳光和能量
-        'stellar-silver': '#e5e7eb',  // 星光银 - 金属光泽
-        'ocean-blue': '#0ea5e9',      // 海洋蓝 - 地球水域
-        'earth-green': '#059669',     // 地球绿 - 陆地植被
-        'atmosphere': '#3b82f6',      // 大气层蓝
-        'nebula': '#8b5cf6',          // 星云紫
-        'starlight': '#f8fafc',       // 星光白
-        'meteor': '#ef4444',          // 流星红
-        'satellite': '#6b7280',       // 卫星灰
-        'horizon': '#fbbf24',         // 地平线金
+        // Nano Banana AI image generation theme color scheme
+        'earth-blue': '#1e40af',      // Earth deep blue - ocean and atmosphere
+        'space-dark': '#0f172a',      // Space dark - cosmic background
+        'cosmic-purple': '#7c3aed',   // Cosmic purple - mysterious space
+        'solar-gold': '#f59e0b',      // Solar gold - sunlight and energy
+        'stellar-silver': '#e5e7eb',  // Stellar silver - metallic luster
+        'ocean-blue': '#0ea5e9',      // Ocean blue - earth waters
+        'earth-green': '#059669',     // Earth green - land vegetation
+        'atmosphere': '#3b82f6',      // Atmosphere blue
+        'nebula': '#8b5cf6',          // Nebula purple
+        'starlight': '#f8fafc',       // Starlight white
+        'meteor': '#ef4444',          // Meteor red
+        'satellite': '#6b7280',       // Satellite gray
+        'horizon': '#fbbf24',         // Horizon gold
         
-        // 嵌套定义保持兼容性
+        // Nested definitions for compatibility
         earth: {
           blue: '#1e40af',
           'space-dark': '#0f172a',
@@ -38,7 +38,7 @@ module.exports = {
           'horizon': '#fbbf24',
         },
         
-        // 保留一些通用颜色用于兼容性
+        // Keep some common colors for compatibility
         primary: '#1e40af',
         secondary: '#7c3aed', 
         accent: '#f59e0b',

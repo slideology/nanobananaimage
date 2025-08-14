@@ -4,90 +4,90 @@ import SEOHead from '../components/SEOHead';
 import { Code, Play, Star, Users, Zap, CheckCircle, ArrowRight, Github, ExternalLink } from 'lucide-react';
 
 /**
- * Qwen3-Coder 项目展示页面
- * 展示实际项目案例、代码生成演示和用户成功案例
+ * Nano Banana AI Research Showcase Page
+ * Display real analysis cases and research insights
  */
 const ShowcasePage: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // 项目案例数据
+  // Project showcase data
   const showcaseProjects = [
     {
       id: 1,
-      title: '电商平台后端API',
-      description: '使用Qwen3-Coder生成完整的电商平台RESTful API，包括用户管理、商品管理、订单处理等核心功能。',
+      title: 'E-commerce Platform Backend API',
+      description: 'Comprehensive analysis of Nano Banana AI model architecture, including neural network layers, attention mechanisms, and computational efficiency insights.',
       tech: ['Node.js', 'Express', 'MongoDB', 'JWT'],
       image: '/images/showcase/ecommerce-api.jpg',
-      demoUrl: 'https://demo.qwen3coder.com/ecommerce',
-      githubUrl: 'https://github.com/qwen3coder/ecommerce-api',
+      demoUrl: 'https://demo.nanobananaimage.org/architecture',
+      githubUrl: 'https://github.com/nanobanana-ai/architecture-analysis',
       stats: {
         linesOfCode: '2,500+',
         timeReduced: '85%',
         testCoverage: '95%'
       },
       features: [
-        '自动生成CRUD操作',
-        '智能数据验证',
-        '安全认证机制',
-        '完整的API文档'
+        'Auto-generate CRUD operations',
+        'Intelligent data validation',
+        'Secure authentication mechanism',
+        'Complete API documentation'
       ]
     },
     {
       id: 2,
-      title: 'React管理后台',
-      description: '基于React和TypeScript的现代化管理后台系统，包含数据可视化、权限管理、实时通知等功能。',
+      title: 'React Admin Dashboard',
+      description: 'Modern admin dashboard system based on React and TypeScript, including data visualization, permission management, real-time notifications and other functions.',
       tech: ['React', 'TypeScript', 'Ant Design', 'Chart.js'],
       image: '/images/showcase/admin-dashboard.jpg',
-      demoUrl: 'https://demo.qwen3coder.com/admin',
-      githubUrl: 'https://github.com/qwen3coder/admin-dashboard',
+      demoUrl: 'https://demo.nanobananaimage.org/benchmarks',
+      githubUrl: 'https://github.com/nanobanana-ai/performance-benchmarks',
       stats: {
         linesOfCode: '3,200+',
         timeReduced: '78%',
         testCoverage: '92%'
       },
       features: [
-        '响应式设计',
-        '组件化架构',
-        '状态管理优化',
-        '性能监控集成'
+        'Responsive design',
+        'Component-based architecture',
+        'State management optimization',
+        'Performance monitoring integration'
       ]
     },
     {
       id: 3,
-      title: '微服务架构',
-      description: '企业级微服务架构解决方案，包含服务发现、负载均衡、熔断器、分布式追踪等核心组件。',
+      title: 'Microservices Architecture',
+      description: 'Enterprise-level microservices architecture solution, including service discovery, load balancing, circuit breaker, distributed tracing and other core components.',
       tech: ['Spring Boot', 'Docker', 'Kubernetes', 'Redis'],
       image: '/images/showcase/microservices.jpg',
-      demoUrl: 'https://demo.qwen3coder.com/microservices',
-      githubUrl: 'https://github.com/qwen3coder/microservices',
+      demoUrl: 'https://demo.nanobananaimage.org/training-insights',
+      githubUrl: 'https://github.com/nanobanana-ai/training-analysis',
       stats: {
         linesOfCode: '5,000+',
         timeReduced: '90%',
         testCoverage: '88%'
       },
       features: [
-        '服务自动发现',
-        '智能负载均衡',
-        '分布式配置管理',
-        '实时监控告警'
+        'Automatic service discovery',
+        'Intelligent load balancing',
+        'Distributed configuration management',
+        'Real-time monitoring and alerting'
       ]
     }
   ];
 
-  // 代码生成演示数据
+  // Code generation demo data
   const codeDemos = [
     {
-      title: 'REST API 生成',
-      description: '输入数据模型，自动生成完整的REST API',
-      input: `// 用户模型定义
+      title: 'REST API Generation',
+      description: 'Input data model, automatically generate complete REST API',
+      input: `// User model definition
 interface User {
   id: string;
   name: string;
   email: string;
   role: 'admin' | 'user';
 }`,
-      output: `// 自动生成的用户API控制器
+      output: `// Auto-generated user API controller
 @Controller('/api/users')
 export class UserController {
   @Get()
@@ -107,12 +107,12 @@ export class UserController {
 }`
     },
     {
-      title: 'React组件生成',
-      description: '描述UI需求，生成完整的React组件',
-      input: `// 需求描述
-创建一个用户卡片组件，显示用户头像、姓名、邮箱和角色，
-支持编辑和删除操作，使用Tailwind CSS样式`,
-      output: `// 自动生成的用户卡片组件
+      title: 'React Component Generation',
+      description: 'Describe UI requirements, generate complete React components',
+      input: `// Requirements description
+Create a user card component that displays user avatar, name, email and role,
+supports edit and delete operations, using Tailwind CSS styles`,
+      output: `// Auto-generated user card component
 interface UserCardProps {
   user: User;
   onEdit: (user: User) => void;
@@ -140,13 +140,13 @@ export const UserCard: React.FC<UserCardProps> = ({ user, onEdit, onDelete }) =>
             onClick={() => onEdit(user)}
             className="p-2 text-blue-600 hover:bg-blue-50 rounded"
           >
-            编辑
+            Edit
           </button>
           <button 
             onClick={() => onDelete(user.id)}
             className="p-2 text-red-600 hover:bg-red-50 rounded"
           >
-            删除
+            Delete
           </button>
         </div>
       </div>
@@ -155,12 +155,12 @@ export const UserCard: React.FC<UserCardProps> = ({ user, onEdit, onDelete }) =>
 };`
     },
     {
-      title: '数据库模型生成',
-      description: '根据业务需求生成数据库模型和迁移文件',
-      input: `// 业务需求
-电商系统需要商品管理功能，包含商品基本信息、
-分类、库存、价格等字段，支持多规格商品`,
-      output: `// 自动生成的商品模型
+      title: 'Database Model Generation',
+      description: 'Generate database models and migration files based on business requirements',
+      input: `// Business requirements
+E-commerce system needs product management functionality, including basic product information,
+category, inventory, price and other fields, supporting multi-specification products`,
+      output: `// Auto-generated product model
 @Entity('products')
 export class Product {
   @PrimaryGeneratedColumn('uuid')
@@ -196,41 +196,41 @@ export class Product {
     }
   ];
 
-  // 用户成功案例
+  // User success stories
   const successStories = [
     {
-      name: '张伟',
-      role: '全栈开发工程师',
-      company: '某互联网公司',
+      name: 'Zhang Wei',
+      role: 'Full-stack Developer',
+      company: 'Internet Company',
       avatar: '/images/testimonials/zhang-wei.jpg',
-      story: '使用Qwen3-Coder后，我的开发效率提升了3倍。原本需要一周完成的功能，现在2天就能搞定，而且代码质量更高。',
-      project: '企业级CRM系统',
+      story: 'After using Nano Banana AI analysis, our research efficiency increased by 3 times. Model insights that originally took weeks to understand can now be grasped in days, with much deeper technical understanding.',
+      project: 'Enterprise CRM System',
       timeReduced: '70%',
       rating: 5
     },
     {
-      name: '李小明',
-      role: '前端开发工程师',
-      company: '某科技创业公司',
+      name: 'Li Xiaoming',
+      role: 'Frontend Developer',
+      company: 'Tech Startup Company',
       avatar: '/images/testimonials/li-xiaoming.jpg',
-      story: 'Qwen3-Coder的React组件生成功能太强大了！不仅能生成基础组件，还能处理复杂的状态管理和业务逻辑。',
-      project: '在线教育平台',
+      story: 'Nano Banana AI\'s architecture analysis feature is so comprehensive! It not only reveals basic model structure, but also provides deep insights into training methodologies and performance optimization.',
+      project: 'Online Education Platform',
       timeReduced: '65%',
       rating: 5
     },
     {
-      name: '王芳',
-      role: '后端开发工程师',
-      company: '某金融科技公司',
+      name: 'Wang Fang',
+      role: 'Backend Developer',
+      company: 'Fintech Company',
       avatar: '/images/testimonials/wang-fang.jpg',
-      story: '微服务架构的生成功能帮我们快速搭建了整套系统架构，包括服务发现、配置管理等，节省了大量时间。',
-      project: '金融风控系统',
+      story: 'The microservices architecture generation feature helped us quickly build the entire system architecture, including service discovery, configuration management, etc., saving a lot of time.',
+      project: 'Financial Risk Control System',
       timeReduced: '80%',
       rating: 5
     }
   ];
 
-  // 播放演示动画
+  // Play demo animation
   const playDemo = (index: number) => {
     setActiveDemo(index);
     setIsPlaying(true);
@@ -240,8 +240,8 @@ export class Product {
   return (
     <>
       <SEOHead 
-        title="项目展示 - Qwen3-Coder"
-        description="查看使用Qwen3-Coder构建的真实项目案例，包括电商平台、管理后台、微服务架构等，了解AI代码生成的强大能力。"
+        title="Research Showcase - Nano Banana AI"
+        description="View real analysis cases of Nano Banana AI, including model architecture studies, performance benchmarks, training insights, etc., to understand the comprehensive capabilities of AI research analysis."
         type="website"
       />
       
@@ -253,40 +253,40 @@ export class Product {
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                项目展示
+                Project Showcase
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-                  见证AI编程的力量
+                  Witness the Power of AI Programming
                 </span>
               </h1>
               <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                探索使用Qwen3-Coder构建的真实项目案例，从简单的API到复杂的微服务架构，
-                体验AI代码生成技术如何革命性地提升开发效率。
+                Explore real analysis cases of Nano Banana AI, from basic model insights to complex architectural studies,
+                experience how AI code generation technology revolutionarily improves development efficiency.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
                   <div className="text-2xl font-bold text-white">50+</div>
-                  <div className="text-gray-300">成功项目</div>
+                  <div className="text-gray-300">Successful Projects</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
                   <div className="text-2xl font-bold text-white">80%</div>
-                  <div className="text-gray-300">时间节省</div>
+                  <div className="text-gray-300">Time Saved</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
                   <div className="text-2xl font-bold text-white">95%</div>
-                  <div className="text-gray-300">代码质量</div>
+                  <div className="text-gray-300">Code Quality</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 项目案例展示 */}
+        {/* Project showcase */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">真实项目案例</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Real Project Cases</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                这些都是使用Qwen3-Coder实际构建的项目，展示了AI代码生成在不同场景下的强大能力
+                These are all research analyses actually conducted on Nano Banana AI, demonstrating the comprehensive capabilities of AI model analysis in different scenarios
               </p>
             </div>
 
@@ -313,20 +313,20 @@ export class Product {
                     <div className="grid grid-cols-3 gap-4 mb-6">
                       <div className="text-center">
                         <div className="text-lg font-bold text-blue-600">{project.stats.linesOfCode}</div>
-                        <div className="text-sm text-gray-500">代码行数</div>
+                        <div className="text-sm text-gray-500">Lines of Code</div>
                       </div>
                       <div className="text-center">
                         <div className="text-lg font-bold text-green-600">{project.stats.timeReduced}</div>
-                        <div className="text-sm text-gray-500">时间节省</div>
+                        <div className="text-sm text-gray-500">Time Saved</div>
                       </div>
                       <div className="text-center">
                         <div className="text-lg font-bold text-purple-600">{project.stats.testCoverage}</div>
-                        <div className="text-sm text-gray-500">测试覆盖</div>
+                        <div className="text-sm text-gray-500">Test Coverage</div>
                       </div>
                     </div>
                     
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">核心功能</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">Core Features</h4>
                       <ul className="space-y-1">
                         {project.features.map((feature, index) => (
                           <li key={index} className="flex items-center text-sm text-gray-600">
@@ -345,7 +345,7 @@ export class Product {
                         className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                       >
                         <Play className="w-4 h-4" />
-                        在线演示
+                        Live Demo
                       </a>
                       <a 
                         href={project.githubUrl}
@@ -363,13 +363,13 @@ export class Product {
           </div>
         </section>
 
-        {/* 代码生成演示 */}
+        {/* Code generation demo */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">代码生成演示</h2>
+              <h2 className="text-4xl font-bold mb-4">Code Generation Demo</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                看看Qwen3-Coder如何将你的想法转化为高质量的代码
+                See how Nano Banana AI analysis transforms complex AI models into understandable insights
               </p>
             </div>
 
@@ -397,7 +397,7 @@ export class Product {
                     {isPlaying && (
                       <div className="flex items-center gap-2 text-green-400">
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                        <span className="text-sm">生成中...</span>
+                        <span className="text-sm">Generating...</span>
                       </div>
                     )}
                     <button
@@ -405,7 +405,7 @@ export class Product {
                       className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2"
                     >
                       <Play className="w-4 h-4" />
-                      运行演示
+                      Run Demo
                     </button>
                   </div>
                 </div>
@@ -417,7 +417,7 @@ export class Product {
                     <div>
                       <h4 className="text-sm font-semibold text-gray-400 mb-3 flex items-center gap-2">
                         <Code className="w-4 h-4" />
-                        输入
+                        Input
                       </h4>
                       <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
                         <pre className="text-sm text-gray-300">
@@ -429,7 +429,7 @@ export class Product {
                     <div>
                       <h4 className="text-sm font-semibold text-gray-400 mb-3 flex items-center gap-2">
                         <Zap className="w-4 h-4" />
-                        生成的代码
+                        Generated Code
                       </h4>
                       <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
                         <pre className="text-sm text-green-400">
@@ -444,13 +444,13 @@ export class Product {
           </div>
         </section>
 
-        {/* 用户成功案例 */}
+        {/* User success stories */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">用户成功案例</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">User Success Stories</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                听听真实用户如何使用Qwen3-Coder提升开发效率，实现项目成功
+                Hear how real researchers use Nano Banana AI analysis to improve research efficiency and achieve breakthrough insights
               </p>
             </div>
 
@@ -482,9 +482,9 @@ export class Product {
                   
                   <div className="border-t pt-4">
                     <div className="flex justify-between items-center text-sm">
-                      <span className="text-gray-600">项目: {story.project}</span>
+                      <span className="text-gray-600">Project: {story.project}</span>
                       <span className="bg-green-100 text-green-800 px-2 py-1 rounded font-medium">
-                        节省 {story.timeReduced}
+                        Saved {story.timeReduced}
                       </span>
                     </div>
                   </div>
@@ -498,24 +498,24 @@ export class Product {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
-              准备开始你的AI编程之旅？
+              Ready to Start Your AI Programming Journey?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              加入数千名开发者的行列，体验Qwen3-Coder带来的编程效率革命
+              Join thousands of researchers and experience the AI analysis revolution brought by Nano Banana AI
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 to="/"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
               >
-                立即开始
+                Get Started
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link 
                 to="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                联系我们
+                Contact Us
               </Link>
             </div>
           </div>

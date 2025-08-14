@@ -1,27 +1,27 @@
 {
-  "siteName": "QWEN3 CODER",
-  "siteUrl": "https://qwen3coder.com",
-  "logo": "/favicon.ico",
+  "siteName": "Nano Banana AI",
+  "siteUrl": "https://nanobananaimage.org",
+  "logo": "/images/nano-banana-logo.svg",
   "favicon": "/favicon.ico",
-  "brandColor": "#6366f1",
+  "brandColor": "#6B46C1",
   "brandColors": {
-    "primary": "#6366f1",
-    "secondary": "#8b5cf6",
-    "accent": "#06b6d4"
+    "primary": "#6B46C1",
+    "secondary": "#F59E0B",
+    "accent": "#06B6D4"
   },
   "company": {
-    "name": "QWEN3 CODER",
-    "description": "Revolutionary AI programming assistant that transforms the way developers write, debug, and optimize code.",
-    "email": "contact@qwen3coder.com",
-    "phone": "+1-555-0123",
-    "address": "San Francisco, CA, USA"
+    "name": "Nano Banana AI Research",
+    "description": "Comprehensive analysis of Google's Nano-Banana AI image generation model. Research-driven insights into speculative AI technology capabilities and limitations.",
+    "email": "research@nanobananaimage.org",
+    "phone": "+1-555-0198",
+    "address": "AI Research Community, Global"
   },
   "social": {
-    "youtube": "https://youtube.com/@qwen3coder",
-    "twitter": "https://twitter.com/qwen3coder",
-    "tiktok": "https://tiktok.com/@qwen3coder",
-    "instagram": "https://instagram.com/qwen3coder",
-    "facebook": "https://facebook.com/qwen3coder"
+    "youtube": "https://youtube.com/@nanobananai",
+    "twitter": "https://twitter.com/nanobananai",
+    "tiktok": "https://tiktok.com/@nanobananai",
+    "instagram": "https://instagram.com/nanobananai",
+    "facebook": "https://facebook.com/nanobananai"
   },
   "analytics": {
     "googleAnalytics": "G-XXXXXXXXXX",
@@ -36,9 +36,9 @@
   },
   "features": {
     "multiLanguage": true,
-    "darkMode": false,
+    "darkMode": true,
     "newsletter": true,
-    "blog": false,
+    "blog": true,
     "ecommerce": false
   }
 }

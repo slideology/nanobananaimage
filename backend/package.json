@@ -1,7 +1,7 @@
 {
-  "name": "ghibli-ai-backend",
+  "name": "nano-banana-ai-backend",
   "version": "1.0.0",
-  "description": "吉卜力风格AI图像生成后端服务",
+  "description": "Nano Banana AI image generation model analysis backend service",
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
@@ -43,7 +43,7 @@
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1"
   },
-  "keywords": ["express", "typescript", "kie.ai", "image-generation"],
-  "author": "Your Name",
+  "keywords": ["express", "typescript", "nano-banana", "ai-research", "image-generation"],
+  "author": "Nano Banana AI Research Team",
   "license": "MIT"
 }

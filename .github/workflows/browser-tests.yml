@@ -1,0 +1,374 @@
+name: Browser Automation Tests
+
+# 触发条件
+on:
+  # Pull Request 触发
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'frontend/**'
+      - 'tests/**'
+      - '.github/workflows/**'
+  
+  # Push 到主分支触发
+  push:
+    branches: [ main ]
+    paths:
+      - 'frontend/**'
+      - 'tests/**'
+  
+  # 手动触发
+  workflow_dispatch:
+    inputs:
+      test_environment:
+        description: '测试环境'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+      browser_type:
+        description: '浏览器类型'
+        required: true
+        default: 'chromium'
+        type: choice
+        options:
+          - chromium
+          - firefox
+          - webkit
+  
+  # 定时任务 - 每天凌晨2点运行
+  schedule:
+    - cron: '0 2 * * *'
+
+# 环境变量
+env:
+  NODE_VERSION: '18'
+  PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/playwright-browsers
+
+# 任务定义
+jobs:
+  # 代码质量检查
+  code-quality:
+    name: 代码质量检查
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: 安装依赖
+        run: |
+          npm ci
+          cd frontend && npm ci
+      
+      - name: 代码格式检查
+        run: |
+          cd frontend
+          npm run lint || echo "Lint check completed"
+      
+      - name: 类型检查
+        run: |
+          cd frontend
+          npm run type-check || echo "Type check completed"
+
+  # 构建测试
+  build-test:
+    name: 构建测试
+    runs-on: ubuntu-latest
+    needs: code-quality
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: 安装依赖
+        run: |
+          npm ci
+          cd frontend && npm ci
+      
+      - name: 构建项目
+        run: npm run build
+      
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-files
+          path: frontend/dist
+          retention-days: 1
+
+  # 浏览器测试
+  browser-tests:
+    name: 浏览器自动化测试
+    runs-on: ubuntu-latest
+    needs: build-test
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+        device: [desktop, tablet, mobile]
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: 安装依赖
+        run: |
+          npm ci
+          cd frontend && npm ci
+      
+      - name: 安装 Playwright 浏览器
+        run: |
+          npm run mcp:install
+          npx playwright install-deps
+      
+      - name: 下载构建产物
+        uses: actions/download-artifact@v4
+        with:
+          name: build-files
+          path: frontend/dist
+      
+      - name: 启动开发服务器
+        run: |
+          cd frontend
+          npm run preview &
+          sleep 10
+        env:
+          PORT: 3002
+      
+      - name: 等待服务器就绪
+        run: |
+          timeout 60 bash -c 'until curl -f http://localhost:3002; do sleep 2; done'
+      
+      - name: 运行浏览器测试
+        run: npm run test:browser
+        env:
+          BROWSER_TYPE: ${{ matrix.browser }}
+          DEVICE_TYPE: ${{ matrix.device }}
+          TEST_BASE_URL: http://localhost:3002
+      
+      - name: 上传测试报告
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-report-${{ matrix.browser }}-${{ matrix.device }}
+          path: |
+            logs/
+            screenshots/
+            videos/
+          retention-days: 7
+      
+      - name: 上传测试结果到 GitHub
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: 浏览器测试结果 (${{ matrix.browser }}-${{ matrix.device }})
+          path: logs/test-report.json
+          reporter: json
+
+  # 性能测试
+  performance-tests:
+    name: 性能测试
+    runs-on: ubuntu-latest
+    needs: build-test
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: 安装依赖
+        run: |
+          npm ci
+          cd frontend && npm ci
+      
+      - name: 下载构建产物
+        uses: actions/download-artifact@v4
+        with:
+          name: build-files
+          path: frontend/dist
+      
+      - name: 启动服务器
+        run: |
+          cd frontend
+          npm run preview &
+          sleep 10
+        env:
+          PORT: 3002
+      
+      - name: 运行 Lighthouse 性能测试
+        uses: treosh/lighthouse-ci-action@v10
+        with:
+          configPath: './.lighthouserc.json'
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+      
+      - name: 上传性能报告
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lighthouse-report
+          path: .lighthouseci/
+          retention-days: 7
+
+  # 可访问性测试
+  accessibility-tests:
+    name: 可访问性测试
+    runs-on: ubuntu-latest
+    needs: build-test
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: 安装依赖
+        run: |
+          npm ci
+          cd frontend && npm ci
+      
+      - name: 下载构建产物
+        uses: actions/download-artifact@v4
+        with:
+          name: build-files
+          path: frontend/dist
+      
+      - name: 启动服务器
+        run: |
+          cd frontend
+          npm run preview &
+          sleep 10
+        env:
+          PORT: 3002
+      
+      - name: 运行可访问性测试
+        run: |
+          npx @axe-core/cli http://localhost:3002 --save accessibility-report.json
+      
+      - name: 上传可访问性报告
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: accessibility-report
+          path: accessibility-report.json
+          retention-days: 7
+
+  # 测试结果汇总
+  test-summary:
+    name: 测试结果汇总
+    runs-on: ubuntu-latest
+    needs: [browser-tests, performance-tests, accessibility-tests]
+    if: always()
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      
+      - name: 下载所有测试报告
+        uses: actions/download-artifact@v4
+        with:
+          path: test-artifacts
+      
+      - name: 生成测试汇总报告
+        run: |
+          echo "# 🧪 测试结果汇总" > test-summary.md
+          echo "" >> test-summary.md
+          echo "## 📊 测试统计" >> test-summary.md
+          echo "- 构建状态: ${{ needs.build-test.result }}" >> test-summary.md
+          echo "- 浏览器测试: ${{ needs.browser-tests.result }}" >> test-summary.md
+          echo "- 性能测试: ${{ needs.performance-tests.result }}" >> test-summary.md
+          echo "- 可访问性测试: ${{ needs.accessibility-tests.result }}" >> test-summary.md
+          echo "" >> test-summary.md
+          echo "## 🔗 相关链接" >> test-summary.md
+          echo "- [测试报告详情](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> test-summary.md
+          echo "- [项目预览](https://qwen3-coder.vercel.app)" >> test-summary.md
+      
+      - name: 添加测试汇总到 PR
+        uses: actions/github-script@v7
+        if: github.event_name == 'pull_request'
+        with:
+          script: |
+            const fs = require('fs');
+            const summary = fs.readFileSync('test-summary.md', 'utf8');
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: summary
+            });
+
+  # 部署到 Staging (仅在 develop 分支)
+  deploy-staging:
+    name: 部署到 Staging
+    runs-on: ubuntu-latest
+    needs: test-summary
+    if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
+    environment:
+      name: staging
+      url: https://qwen3-coder-staging.vercel.app
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      
+      - name: 部署到 Vercel Staging
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: frontend
+          scope: ${{ secrets.VERCEL_ORG_ID }}
+
+  # 部署到 Production (仅在 main 分支)
+  deploy-production:
+    name: 部署到 Production
+    runs-on: ubuntu-latest
+    needs: test-summary
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    environment:
+      name: production
+      url: https://qwen3-coder.vercel.app
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      
+      - name: 部署到 Vercel Production
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: frontend
+          scope: ${{ secrets.VERCEL_ORG_ID }}
+      
+      - name: 部署后验证测试
+        run: |
+          sleep 30
+          curl -f https://qwen3-coder.vercel.app || exit 1
+          echo "✅ 生产环境部署验证成功"

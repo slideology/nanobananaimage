@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 
 /**
  * Responsive Design Hook
- * 响应式设计钩子，提供断点检测、设备类型识别等功能
- * 支持Task 2.3的响应式设计改进需求
+ * Responsive design hook that provides breakpoint detection, device type identification and other features
+ * Supports Task 2.3 responsive design improvement requirements
  */
 
-// 断点定义
+// Breakpoint definitions
 export const breakpoints = {
   xs: 0,
   sm: 640,
@@ -18,13 +18,13 @@ export const breakpoints = {
 
 export type Breakpoint = keyof typeof breakpoints;
 
-// 设备类型
+// Device types
 export type DeviceType = 'mobile' | 'tablet' | 'desktop';
 
-// 屏幕方向
+// Screen orientation
 export type Orientation = 'portrait' | 'landscape';
 
-// 响应式状态接口
+// Responsive state interface
 export interface ResponsiveState {
   width: number;
   height: number;
@@ -39,7 +39,7 @@ export interface ResponsiveState {
 }
 
 /**
- * 获取当前断点
+ * Get current breakpoint
  */
 const getCurrentBreakpoint = (width: number): Breakpoint => {
   if (width >= breakpoints['2xl']) return '2xl';
@@ -51,7 +51,7 @@ const getCurrentBreakpoint = (width: number): Breakpoint => {
 };
 
 /**
- * 获取设备类型
+ * Get device type
  */
 const getDeviceType = (width: number): DeviceType => {
   if (width < breakpoints.md) return 'mobile';
@@ -60,25 +60,25 @@ const getDeviceType = (width: number): DeviceType => {
 };
 
 /**
- * 获取屏幕方向
+ * Get screen orientation
  */
 const getOrientation = (width: number, height: number): Orientation => {
   return width > height ? 'landscape' : 'portrait';
 };
 
 /**
- * 检测是否为触摸设备
+ * Detect if it's a touch device
  */
 const isTouchDevice = (): boolean => {
   return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 };
 
 /**
- * 响应式设计钩子
+ * Responsive design hook
  */
 export const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<ResponsiveState>(() => {
-    // 服务端渲染兼容性处理
+    // Server-side rendering compatibility handling
     if (typeof window === 'undefined') {
       return {
         width: 1024,
@@ -120,7 +120,7 @@ export const useResponsive = (): ResponsiveState => {
     let timeoutId: NodeJS.Timeout;
 
     const handleResize = () => {
-      // 防抖处理，避免频繁更新
+      // Debounce handling to avoid frequent updates
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         const width = window.innerWidth;
@@ -160,9 +160,9 @@ export const useResponsive = (): ResponsiveState => {
 };
 
 /**
- * 断点匹配钩子
- * @param breakpoint 目标断点
- * @param direction 匹配方向：'up' 表示大于等于，'down' 表示小于等于，'only' 表示仅匹配
+ * Breakpoint matching hook
+ * @param breakpoint Target breakpoint
+ * @param direction Matching direction: 'up' means greater than or equal, 'down' means less than or equal, 'only' means exact match
  */
 export const useBreakpoint = (
   breakpoint: Breakpoint,
@@ -188,8 +188,8 @@ export const useBreakpoint = (
 };
 
 /**
- * 媒体查询钩子
- * @param query CSS媒体查询字符串
+ * Media query hook
+ * @param query CSS media query string
  */
 export const useMediaQuery = (query: string): boolean => {
   const [matches, setMatches] = useState(() => {
@@ -215,7 +215,7 @@ export const useMediaQuery = (query: string): boolean => {
 };
 
 /**
- * 视口尺寸钩子
+ * Viewport size hook
  */
 export const useViewport = () => {
   const { width, height } = useResponsive();
@@ -223,7 +223,7 @@ export const useViewport = () => {
 };
 
 /**
- * 设备检测钩子
+ * Device detection hook
  */
 export const useDevice = () => {
   const { deviceType, isTouch, pixelRatio, orientation } = useResponsive();

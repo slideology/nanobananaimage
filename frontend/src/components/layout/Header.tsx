@@ -5,9 +5,9 @@ import { Menu, X, Globe } from 'lucide-react';
 import { useResponsive } from '../../hooks/useResponsive';
 
 /**
- * Qwen3-Coder 单页应用导航栏组件
- * 适配单页应用，包含锚点导航和固定导航栏效果
- * 支持AffiliateBanner的动态高度调整
+ * Nano Banana AI Single Page Application Navigation Component
+ * Adapted for single page applications, includes anchor navigation and fixed navigation bar effects
+ * Supports dynamic height adjustment for AffiliateBanner
  */
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,17 +19,16 @@ const Header = () => {
 
   const { isMobile, isTablet } = useResponsive();
   
-  // Navigation links data - Mixed navigation (anchor + page routing)
+  // Navigation links data - Nano Banana pages
   const navLinks = [
-    { name: 'Features', path: '/features', type: 'route' },
-    { name: 'Live Demo', path: '#demo', type: 'anchor' },
-    { name: 'Showcase', path: '/showcase', type: 'route' },
-    { name: 'Documentation', path: '/docs', type: 'route' },
-    { name: 'Reviews', path: '#reviews', type: 'anchor' },
-    { name: 'FAQ', path: '#faq', type: 'anchor' },
+    { name: 'Analysis', path: '/analysis', type: 'route' },
+    { name: 'Capabilities', path: '/capabilities', type: 'route' },
+    { name: 'Benchmarks', path: '/benchmarks', type: 'route' },
+    { name: 'Research', path: '/research', type: 'route' },
+    { name: 'About', path: '/about', type: 'route' },
   ];
   
-  // 监听滚动事件和Banner高度变化
+  // Listen to scroll events and Banner height changes
   useEffect(() => {
     const updateBannerHeight = () => {
       const bannerElement = document.querySelector('[class*="bg-gradient-to-r from-indigo-500"]');
@@ -40,7 +39,7 @@ const Header = () => {
       const scrollTop = window.scrollY;
       setIsScrolled(scrollTop > 50);
       
-      // 检测当前激活的区块
+      // Detect currently active section
       const sections = ['demo', 'showcase', 'features', 'reviews', 'faq'];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
@@ -54,14 +53,14 @@ const Header = () => {
       setActiveSection(currentSection || '');
     };
 
-    // 初始化Banner高度
+    // Initialize Banner height
     updateBannerHeight();
     
-    // 监听窗口大小变化和滚动
+    // Listen to window size changes and scroll
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', updateBannerHeight);
     
-    // 使用MutationObserver监听Banner的显示/隐藏
+    // Use MutationObserver to listen for Banner show/hide
     const observer = new MutationObserver(updateBannerHeight);
     const targetNode = document.body;
     observer.observe(targetNode, { childList: true, subtree: true });
@@ -73,7 +72,7 @@ const Header = () => {
     };
   }, []);
   
-  // 判断当前导航链接是否激活
+  // Determine if current navigation link is active
   const isActive = (link: { path: string; type: string }) => {
     if (link.type === 'route') {
       return location.pathname === link.path;
@@ -83,20 +82,33 @@ const Header = () => {
     }
   };
   
-  // 切换移动端菜单显示状态
+  // Toggle mobile menu display state
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // 处理导航点击
+  // Handle navigation clicks
   const handleNavigation = (link: { path: string; type: string }) => {
     if (link.type === 'route') {
       navigate(link.path);
     } else {
       const sectionId = link.path.replace('#', '');
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      // If we're not on the home page, navigate to home first, then scroll to section
+      if (location.pathname !== '/') {
+        navigate('/');
+        // Use setTimeout to ensure the page has loaded before scrolling
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        // If we're already on the home page, scroll directly
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }
     setIsMenuOpen(false);
@@ -113,21 +125,21 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo区域 */}
+          {/* Logo area */}
           <Link 
             to="/" 
             className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-1"
             aria-label="Home"
           >
             <img
-              src="/favicon.ico"
-              alt="Qwen3-Coder Logo"
+              src="/images/nano-banana-logo.png"
+              alt="Nano Banana AI Logo"
               className="w-8 h-8 rounded-full"
             />
-            <span className={`font-bold text-white ${isMobile ? 'text-xl' : 'text-2xl'}`}>Qwen3-Coder</span>
+            <span className={`font-bold bg-gradient-to-r from-purple-400 via-amber-400 to-cyan-400 bg-clip-text text-transparent ${isMobile ? 'text-xl' : 'text-2xl'}`}>Nano•Banana</span>
           </Link>
           
-          {/* 桌面端导航菜单 */}
+          {/* Desktop navigation menu */}
           <nav 
             className="hidden md:flex space-x-8"
             role="navigation"

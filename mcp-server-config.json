@@ -1,0 +1,108 @@
+{
+  "name": "nano-banana-ai-browser-mcp",
+  "version": "1.0.0",
+  "description": "Browser MCP Server Configuration for Nano Banana AI Project",
+  "server": {
+    "host": "localhost",
+    "port": 3333,
+    "timeout": 30000,
+    "maxConnections": 10
+  },
+  "browser": {
+    "engine": "chromium",
+    "headless": true,
+    "devtools": false,
+    "slowMo": 0,
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-accelerated-2d-canvas",
+      "--no-first-run",
+      "--no-zygote",
+      "--disable-gpu",
+      "--disable-background-timer-throttling",
+      "--disable-backgrounding-occluded-windows",
+      "--disable-renderer-backgrounding"
+    ],
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  },
+  "testing": {
+    "baseUrl": "https://nanobananaimage.org",
+    "timeout": 30000,
+    "retries": 2,
+    "parallel": true,
+    "maxWorkers": 4,
+    "screenshot": {
+      "mode": "only-on-failure",
+      "fullPage": true
+    },
+    "video": {
+      "mode": "retain-on-failure",
+      "size": {
+        "width": 1280,
+        "height": 720
+      }
+    }
+  },
+  "devices": {
+    "desktop": {
+      "name": "Desktop",
+      "viewport": { "width": 1920, "height": 1080 },
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+    },
+    "tablet": {
+      "name": "iPad",
+      "viewport": { "width": 768, "height": 1024 },
+      "userAgent": "Mozilla/5.0 (iPad; CPU OS 14_0 like Mac OS X) AppleWebKit/605.1.15"
+    },
+    "mobile": {
+      "name": "iPhone 12",
+      "viewport": { "width": 375, "height": 667 },
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15"
+    }
+  },
+  "security": {
+    "allowedDomains": [
+      "localhost",
+      "127.0.0.1",
+      "nanobananaimage.org",
+      "*.vercel.app"
+    ],
+    "blockedResources": [
+      "*.ads.txt",
+      "*google-analytics*",
+      "*clarity.ms*",
+      "*facebook.com*",
+      "*twitter.com*"
+    ],
+    "permissions": {
+      "geolocation": "deny",
+      "notifications": "deny",
+      "camera": "deny",
+      "microphone": "deny"
+    }
+  },
+  "logging": {
+    "level": "info",
+    "console": true,
+    "file": {
+      "enabled": true,
+      "path": "./logs/mcp-server.log",
+      "maxSize": "10MB",
+      "maxFiles": 5
+    }
+  },
+  "features": {
+    "screenshots": true,
+    "videoRecording": true,
+    "networkInterception": true,
+    "performanceMetrics": true,
+    "accessibilityTesting": true,
+    "seoTesting": true
+  }
+}

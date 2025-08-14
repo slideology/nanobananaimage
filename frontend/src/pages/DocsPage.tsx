@@ -3,8 +3,8 @@ import { Book, Code, FileText, Zap, Shield, Globe, ChevronRight, Copy, Check } f
 import { useSiteConfig } from '../hooks/useSiteConfig';
 
 /**
- * 技术文档页面组件
- * 提供API文档、开发者指南、集成示例和故障排除指南
+ * Technical Documentation Page Component
+ * Provides API documentation, developer guides, integration examples and troubleshooting guides
  */
 const DocsPage: React.FC = () => {
   const { siteConfig } = useSiteConfig();
@@ -12,10 +12,10 @@ const DocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
   /**
-   * 复制代码到剪贴板
-   * @param code - 要复制的代码字符串
-   * @param id - 代码块的唯一标识
-   */
+ * Copy code to clipboard
+ * @param code - Code string to copy
+ * @param id - Unique identifier for the code block
+ */
   const copyToClipboard = async (code: string, id: string) => {
     try {
       await navigator.clipboard.writeText(code);
@@ -26,20 +26,20 @@ const DocsPage: React.FC = () => {
     }
   };
 
-  // API端点配置
+  // API endpoint configuration
   const apiEndpoints = [
     {
       method: 'POST',
       endpoint: '/api/v1/generate',
-      description: '生成代码',
+      description: 'Generate code',
       params: {
-        prompt: 'string - 代码生成提示',
-        language: 'string - 目标编程语言',
-        framework: 'string - 可选框架',
-        complexity: 'string - 复杂度级别 (simple|medium|complex)'
+        prompt: 'string - Code generation prompt',
+        language: 'string - Target programming language',
+        framework: 'string - Optional framework',
+        complexity: 'string - Complexity level (simple|medium|complex)'
       },
       example: `{
-  "prompt": "创建一个React Todo组件",
+  "prompt": "Create a React Todo component",
   "language": "javascript",
   "framework": "react",
   "complexity": "medium"
@@ -48,11 +48,11 @@ const DocsPage: React.FC = () => {
     {
       method: 'POST',
       endpoint: '/api/v1/optimize',
-      description: '优化现有代码',
+      description: 'Optimize existing code',
       params: {
-        code: 'string - 要优化的代码',
-        language: 'string - 编程语言',
-        optimization_type: 'string - 优化类型 (performance|readability|security)'
+        code: 'string - Code to optimize',
+        language: 'string - Programming language',
+        optimization_type: 'string - Optimization type (performance|readability|security)'
       },
       example: `{
   "code": "function fibonacci(n) { if(n <= 1) return n; return fibonacci(n-1) + fibonacci(n-2); }",
@@ -63,11 +63,11 @@ const DocsPage: React.FC = () => {
     {
       method: 'POST',
       endpoint: '/api/v1/review',
-      description: '代码审查',
+      description: 'Code review',
       params: {
-        code: 'string - 要审查的代码',
-        language: 'string - 编程语言',
-        review_level: 'string - 审查级别 (basic|detailed|comprehensive)'
+        code: 'string - Code to review',
+        language: 'string - Programming language',
+        review_level: 'string - Review level (basic|detailed|comprehensive)'
       },
       example: `{
   "code": "const users = data.filter(user => user.active == true)",
@@ -77,63 +77,63 @@ const DocsPage: React.FC = () => {
     }
   ];
 
-  // 集成示例
+  // Integration examples
   const integrationExamples = [
     {
       title: 'JavaScript/Node.js',
       language: 'javascript',
-      code: `// 安装SDK
-npm install qwen3-coder-sdk
+      code: `// Install SDK
+npm install nano-banana-ai-sdk
 
-// 基本使用
-const { Qwen3Coder } = require('qwen3-coder-sdk');
+// Basic usage
+const { NanoBananaAI } = require('nano-banana-ai-sdk');
 
-const client = new Qwen3Coder({
+const client = new NanoBananaAI({
   apiKey: 'your-api-key',
-  baseURL: 'https://api.qwen3coder.com'
+  baseURL: 'https://api.nanobanana-ai.com'
 });
 
 async function generateCode() {
   try {
     const result = await client.generate({
-      prompt: '创建一个Express.js路由处理器',
+      prompt: 'Create an Express.js route handler',
       language: 'javascript',
       framework: 'express'
     });
     
-    console.log('生成的代码:', result.code);
-    console.log('说明:', result.explanation);
+    console.log('Generated code:', result.code);
+    console.log('Explanation:', result.explanation);
   } catch (error) {
-    console.error('生成失败:', error.message);
+    console.error('Generation failed:', error.message);
   }
 }`
     },
     {
       title: 'Python',
       language: 'python',
-      code: `# 安装SDK
-pip install qwen3-coder-python
+      code: `# Install SDK
+pip install nano-banana-ai-python
 
-# 基本使用
-from qwen3_coder import Qwen3Coder
+# Basic usage
+from nano_banana_ai import NanoBananaAI
 
-client = Qwen3Coder(
+client = NanoBananaAI(
     api_key="your-api-key",
-    base_url="https://api.qwen3coder.com"
+    base_url="https://api.nanobanana-ai.com"
 )
 
 def generate_code():
     try:
         result = client.generate(
-            prompt="创建一个FastAPI端点",
+            prompt="Create a FastAPI endpoint",
             language="python",
             framework="fastapi"
         )
         
-        print(f"生成的代码: {result.code}")
-        print(f"说明: {result.explanation}")
+        print(f"Generated code: {result.code}")
+        print(f"Explanation: {result.explanation}")
     except Exception as error:
-        print(f"生成失败: {error}")
+        print(f"Generation failed: {error}")
 
 if __name__ == "__main__":
     generate_code()`
@@ -141,79 +141,79 @@ if __name__ == "__main__":
     {
       title: 'cURL',
       language: 'bash',
-      code: `# 直接API调用
-curl -X POST https://api.qwen3coder.com/api/v1/generate \
+      code: `# Direct API call
+curl -X POST https://api.nanobanana-ai.com/api/v1/analyze \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer your-api-key" \
   -d '{
-    "prompt": "创建一个Go HTTP服务器",
+    "prompt": "Create a Go HTTP server",
     "language": "go",
     "complexity": "medium"
   }'
 
-# 响应示例
+# Response example
 {
   "success": true,
   "data": {
     "code": "package main\n\nimport (\n  \"fmt\"\n  \"net/http\"\n)\n\nfunc main() {\n  http.HandleFunc(\"/\", handler)\n  fmt.Println(\"Server starting on :8080\")\n  http.ListenAndServe(\":8080\", nil)\n}\n\nfunc handler(w http.ResponseWriter, r *http.Request) {\n  fmt.Fprintf(w, \"Hello, World!\")\n}",
-    "explanation": "这是一个简单的Go HTTP服务器...",
-    "suggestions": ["添加错误处理", "使用路由器"]
+    "explanation": "This is a simple Go HTTP server...",
+    "suggestions": ["Add error handling", "Use router"]
   }
 }`
     }
   ];
 
-  // 故障排除指南
+  // Troubleshooting guide
   const troubleshooting = [
     {
-      issue: 'API密钥无效',
-      solution: '请确保您的API密钥正确，并且账户有足够的配额。检查密钥是否已过期。',
+      issue: 'Invalid API key',
+    solution: 'Please ensure your API key is correct and your account has sufficient quota. Check if the key has expired.',
       code: 'HTTP 401 Unauthorized'
     },
     {
-      issue: '请求超时',
-      solution: '复杂的代码生成可能需要更长时间。建议增加超时时间或简化提示。',
+      issue: 'Request timeout',
+    solution: 'Complex code generation may take longer. Consider increasing timeout or simplifying the prompt.',
       code: 'HTTP 408 Request Timeout'
     },
     {
-      issue: '生成的代码质量不佳',
-      solution: '尝试提供更详细和具体的提示。包含上下文信息和期望的代码风格。',
-      code: '优化提示示例："创建一个React函数组件，使用TypeScript，包含props类型定义"'
+      issue: 'Poor generated code quality',
+    solution: 'Try providing more detailed and specific prompts. Include context information and expected code style.',
+    code: 'Optimized prompt example: "Create a React functional component using TypeScript with props type definitions"'
     },
     {
-      issue: '不支持的编程语言',
-      solution: '查看支持的语言列表。我们持续添加新语言支持。',
+      issue: 'Unsupported programming language',
+    solution: 'Check the list of supported languages. We continuously add support for new languages.',
       code: 'HTTP 400 Bad Request'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* 页面头部 */}
+      {/* Page header */}
       <div className="relative pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              技术文档
+              Technical Documentation
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
-                开发者指南
+                Developer Guide
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              完整的API文档、集成示例和最佳实践，帮助您快速集成Qwen3-Coder
+              Complete API documentation, integration examples and best practices to help you quickly integrate Nano Banana AI
             </p>
           </div>
         </div>
       </div>
 
-      {/* 导航标签 */}
+      {/* Navigation tabs */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="flex flex-wrap justify-center gap-4">
           {[
-            { id: 'api', label: 'API文档', icon: Code },
-            { id: 'guide', label: '开发者指南', icon: Book },
-            { id: 'examples', label: '集成示例', icon: FileText },
-            { id: 'troubleshooting', label: '故障排除', icon: Shield }
+            { id: 'api', label: 'API Documentation', icon: Code },
+          { id: 'guide', label: 'Developer Guide', icon: Book },
+          { id: 'examples', label: 'Integration Examples', icon: FileText },
+          { id: 'troubleshooting', label: 'Troubleshooting', icon: Shield }
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -231,15 +231,15 @@ curl -X POST https://api.qwen3coder.com/api/v1/generate \
         </div>
       </div>
 
-      {/* 内容区域 */}
+      {/* Content area */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        {/* API文档 */}
+        {/* API Documentation */}
         {activeTab === 'api' && (
           <div className="space-y-8">
             <div className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Code className="w-8 h-8 text-blue-400" />
-                API端点
+                API Endpoints
               </h2>
               <div className="space-y-6">
                 {apiEndpoints.map((endpoint, index) => (
@@ -256,7 +256,7 @@ curl -X POST https://api.qwen3coder.com/api/v1/generate \
                     
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h4 className="text-white font-semibold mb-3">参数</h4>
+                        <h4 className="text-white font-semibold mb-3">Parameters</h4>
                         <div className="space-y-2">
                           {Object.entries(endpoint.params).map(([key, value]) => (
                             <div key={key} className="flex flex-col">
@@ -269,7 +269,7 @@ curl -X POST https://api.qwen3coder.com/api/v1/generate \
                       
                       <div>
                         <div className="flex items-center justify-between mb-3">
-                          <h4 className="text-white font-semibold">请求示例</h4>
+                          <h4 className="text-white font-semibold">Request Example</h4>
                           <button
                             onClick={() => copyToClipboard(endpoint.example, `api-${index}`)}
                             className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors"
@@ -280,7 +280,7 @@ curl -X POST https://api.qwen3coder.com/api/v1/generate \
                               <Copy className="w-4 h-4" />
                             )}
                             <span className="text-sm">
-                              {copiedCode === `api-${index}` ? '已复制' : '复制'}
+                              {copiedCode === `api-${index}` ? 'Copied' : 'Copy'}
                             </span>
                           </button>
                         </div>
@@ -296,27 +296,27 @@ curl -X POST https://api.qwen3coder.com/api/v1/generate \
           </div>
         )}
 
-        {/* 开发者指南 */}
+        {/* Developer Guide */}
         {activeTab === 'guide' && (
           <div className="space-y-8">
             <div className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Book className="w-8 h-8 text-purple-400" />
-                快速开始
+                Quick Start
               </h2>
               
               <div className="space-y-8">
                 <div className="bg-gray-900/50 rounded-xl p-6">
                   <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                     <span className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-sm font-bold">1</span>
-                    获取API密钥
+                    Get API Key
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    首先，您需要在我们的开发者控制台注册账户并获取API密钥。
+                    First, you need to register an account in our developer console and get an API key.
                   </p>
                   <div className="bg-blue-900/30 border border-blue-600 rounded-lg p-4">
                     <p className="text-blue-200 text-sm">
-                      💡 提示：请妥善保管您的API密钥，不要在客户端代码中暴露。
+                      💡 Tip: Please keep your API key secure and do not expose it in client-side code.
                     </p>
                   </div>
                 </div>
@@ -324,23 +324,23 @@ curl -X POST https://api.qwen3coder.com/api/v1/generate \
                 <div className="bg-gray-900/50 rounded-xl p-6">
                   <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                     <span className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-sm font-bold">2</span>
-                    选择集成方式
+                    Choose Integration Method
                   </h3>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="bg-gray-800 rounded-lg p-4 border border-gray-600">
                       <Zap className="w-8 h-8 text-yellow-400 mb-3" />
                       <h4 className="text-white font-semibold mb-2">REST API</h4>
-                      <p className="text-gray-400 text-sm">直接调用HTTP API，适合任何编程语言</p>
+                      <p className="text-gray-400 text-sm">Direct HTTP API calls, suitable for any programming language</p>
                     </div>
                     <div className="bg-gray-800 rounded-lg p-4 border border-gray-600">
                       <Code className="w-8 h-8 text-green-400 mb-3" />
                       <h4 className="text-white font-semibold mb-2">SDK</h4>
-                      <p className="text-gray-400 text-sm">使用官方SDK，提供更好的开发体验</p>
+                      <p className="text-gray-400 text-sm">Use official SDK for better development experience</p>
                     </div>
                     <div className="bg-gray-800 rounded-lg p-4 border border-gray-600">
                       <Globe className="w-8 h-8 text-blue-400 mb-3" />
-                      <h4 className="text-white font-semibold mb-2">Web界面</h4>
-                      <p className="text-gray-400 text-sm">通过Web界面快速测试和原型开发</p>
+                      <h4 className="text-white font-semibold mb-2">Web Interface</h4>
+              <p className="text-gray-400 text-sm">Quick testing and prototyping through web interface</p>
                     </div>
                   </div>
                 </div>
@@ -348,28 +348,28 @@ curl -X POST https://api.qwen3coder.com/api/v1/generate \
                 <div className="bg-gray-900/50 rounded-xl p-6">
                   <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                     <span className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-sm font-bold">3</span>
-                    最佳实践
+                    Best Practices
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <ChevronRight className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                       <div>
-                        <h4 className="text-white font-medium">提供清晰的提示</h4>
-                        <p className="text-gray-400 text-sm">详细描述您想要的代码功能、风格和约束条件</p>
+                        <h4 className="text-white font-medium">Provide Clear Prompts</h4>
+                        <p className="text-gray-400 text-sm">Describe in detail the code functionality, style, and constraints you want</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <ChevronRight className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                       <div>
-                        <h4 className="text-white font-medium">迭代优化</h4>
-                        <p className="text-gray-400 text-sm">使用生成的代码作为起点，通过多次迭代达到最佳效果</p>
+                        <h4 className="text-white font-medium">Iterative Optimization</h4>
+                        <p className="text-gray-400 text-sm">Use generated code as a starting point and iterate multiple times for best results</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <ChevronRight className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                       <div>
-                        <h4 className="text-white font-medium">代码审查</h4>
-                        <p className="text-gray-400 text-sm">始终审查生成的代码，确保符合您的安全和质量标准</p>
+                        <h4 className="text-white font-medium">Code Review</h4>
+                        <p className="text-gray-400 text-sm">Always review generated code to ensure it meets your security and quality standards</p>
                       </div>
                     </div>
                   </div>
@@ -379,13 +379,13 @@ curl -X POST https://api.qwen3coder.com/api/v1/generate \
           </div>
         )}
 
-        {/* 集成示例 */}
+        {/* Integration Examples */}
         {activeTab === 'examples' && (
           <div className="space-y-8">
             <div className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <FileText className="w-8 h-8 text-green-400" />
-                集成示例
+                Integration Examples
               </h2>
               
               <div className="space-y-6">
@@ -403,7 +403,7 @@ curl -X POST https://api.qwen3coder.com/api/v1/generate \
                           <Copy className="w-4 h-4" />
                         )}
                         <span className="text-sm">
-                          {copiedCode === `example-${index}` ? '已复制' : '复制代码'}
+                          {copiedCode === `example-${index}` ? 'Copied' : 'Copy Code'}
                         </span>
                       </button>
                     </div>
@@ -417,13 +417,13 @@ curl -X POST https://api.qwen3coder.com/api/v1/generate \
           </div>
         )}
 
-        {/* 故障排除 */}
+        {/* Troubleshooting */}
         {activeTab === 'troubleshooting' && (
           <div className="space-y-8">
             <div className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-red-400" />
-                常见问题解决
+                Troubleshooting Guide
               </h2>
               
               <div className="space-y-6">
@@ -444,22 +444,22 @@ curl -X POST https://api.qwen3coder.com/api/v1/generate \
               </div>
               
               <div className="mt-8 bg-blue-900/30 border border-blue-600 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">需要更多帮助？</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Need More Help?</h3>
                 <p className="text-blue-200 mb-4">
-                  如果您遇到的问题不在上述列表中，请联系我们的技术支持团队。
+                  If your issue is not listed above, please contact our technical support team.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="mailto:support@qwen3coder.com"
+                    href="mailto:support@nanobanana-ai.com"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors"
                   >
-                    发送邮件
+                    Send Email
                   </a>
                   <a
                     href="#"
                     className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-lg transition-colors"
                   >
-                    在线聊天
+                    Live Chat
                   </a>
                 </div>
               </div>

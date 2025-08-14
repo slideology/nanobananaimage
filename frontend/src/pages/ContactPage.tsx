@@ -7,7 +7,7 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="Contact Us - Qwen3-Coder"
+        title="Contact Us - Nano Banana AI"
         description="Have questions or suggestions? Feel free to contact us. Our team is here to help."
         type="website"
       />
@@ -29,8 +29,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-medium text-gray-300">Email</h3>
                     <p className="mt-2 text-gray-400">
-                      <a href="mailto:contact@qwen3coder.com" className="hover:text-white">
-                  contact@qwen3coder.com
+                      <a href="mailto:contact@nanobananaimage.org" className="hover:text-white">
+          contact@nanobananaimage.org
                       </a>
                     </p>
                   </div>
@@ -39,18 +39,18 @@ const ContactPage: React.FC = () => {
                     <h3 className="text-lg font-medium text-gray-300">Social Media</h3>
                     <div className="mt-2 space-y-2 text-gray-400">
                       <p>
-                        <a href="https://twitter.com/Qwen3Coder" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                  Twitter: @Qwen3Coder
+                        <a href="https://twitter.com/NanoBananaAI" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+          Twitter: @NanoBananaAI
                         </a>
                       </p>
                       <p>
-                        <a href="https://discord.gg/qwen3coder" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                          Discord: Qwen3-Coder Community
+                        <a href="https://discord.gg/nanobanana-ai" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+          Discord: Nano Banana AI Community
                         </a>
                       </p>
                       <p>
-                        <a href="https://linkedin.com/company/qwen3coder" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                          LinkedIn: Qwen3-Coder
+                        <a href="https://linkedin.com/company/nanobanana-ai" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+          LinkedIn: Nano Banana AI
                         </a>
                       </p>
                     </div>

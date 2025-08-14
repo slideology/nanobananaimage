@@ -1,12 +1,12 @@
 import React from 'react';
 
 /**
- * Google AdSense 自动广告模式组件
- * 自动广告无需渲染任何标签，AdSense 会自动在页面合适位置插入广告。
- * 只需确保 public/index.html 已正确引入自动广告脚本。
+ * Google AdSense automatic ad mode component
+ * Automatic ads do not need to render any tags, AdSense will automatically insert ads at appropriate positions on the page.
+ * Just ensure that the automatic ad script has been correctly included in public/index.html.
  */
 const GoogleAdSenseBanner: React.FC = () => {
-  // 自动广告模式下，返回 null，不渲染任何内容
+  // In automatic ad mode, return null and do not render any content
   return null;
 };
 

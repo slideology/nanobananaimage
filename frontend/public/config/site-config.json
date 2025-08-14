@@ -1,0 +1,44 @@
+{
+  "siteName": "NANO BANANA AI",
+  "siteUrl": "https://nanobananaimage.org",
+  "logo": "/images/nano-banana-logo.svg",
+  "favicon": "/favicon.ico",
+  "brandColor": "#6366f1",
+  "brandColors": {
+    "primary": "#6366f1",
+    "secondary": "#8b5cf6",
+    "accent": "#06b6d4"
+  },
+  "company": {
+    "name": "NANO BANANA AI",
+    "description": "Google Unreleased Image Generation Model Analysis Platform",
+    "email": "contact@nanobananaimage.org",
+    "phone": "+1-555-0123",
+    "address": "San Francisco, CA, USA"
+  },
+  "social": {
+    "youtube": "https://youtube.com/@nanobananaai",
+    "twitter": "https://twitter.com/nanobananaai",
+    "tiktok": "https://tiktok.com/@nanobananaai",
+    "instagram": "https://instagram.com/nanobananaai",
+    "facebook": "https://facebook.com/nanobananaai"
+  },
+  "analytics": {
+    "googleAnalytics": "G-XXXXXXXXXX",
+    "googleTagManager": "GTM-XXXXXXX",
+    "facebookPixel": "123456789",
+    "hotjar": "1234567"
+  },
+  "integrations": {
+    "crisp": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "intercom": "xxxxxxxx",
+    "stripe": "pk_live_xxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  "features": {
+    "multiLanguage": true,
+    "darkMode": false,
+    "newsletter": true,
+    "blog": false,
+    "ecommerce": false
+  }
+}

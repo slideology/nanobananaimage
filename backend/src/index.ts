@@ -11,16 +11,16 @@ import { requestLogger } from './middleware/requestLogger';
 import apiRoutes from './routes/api';
 import callbackRoutes from './routes/callback';
 
-// 加载环境变量
+// Load environment variables
 dotenv.config();
 
 const app = express();
 const server = createServer(app);
 
-// 设置WebSocket
+// Setup WebSocket
 setupWebSocket(server);
 
-// 中间件配置
+// Middleware configuration
 app.use(helmet());
 app.use(compression());
 app.use(cors({
@@ -31,7 +31,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(requestLogger);
 
-// 健康检查端点
+// Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ 
     status: 'OK', 
@@ -40,16 +40,16 @@ app.get('/health', (req, res) => {
   });
 });
 
-// API路由
+// API routes
 app.use('/api', apiRoutes);
 app.use('/callback', callbackRoutes);
 
-// 404处理
+// 404 handler
 app.use('*', (req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-// 错误处理
+// Error handler
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
@@ -60,4 +60,4 @@ server.listen(PORT, () => {
   logger.info(`🔗 Callback URL: ${process.env.CALLBACK_BASE_URL}`);
 });
 
-export default app; 
+export default app;

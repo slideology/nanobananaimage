@@ -24,7 +24,7 @@ const PerformanceBenchmarks: React.FC = () => {
   const [activeTab, setActiveTab] = useState('speed');
   const [animatedValues, setAnimatedValues] = useState<{[key: string]: number}>({});
 
-  // 性能基准数据
+  // Performance benchmark data
   const benchmarkData: {[key: string]: BenchmarkData[]} = {
     speed: [
       {
@@ -106,7 +106,7 @@ const PerformanceBenchmarks: React.FC = () => {
     ]
   };
 
-  // 实时性能指标
+  // Real-time performance metrics
   const performanceMetrics: PerformanceMetric[] = [
     {
       id: 'uptime',
@@ -146,7 +146,7 @@ const PerformanceBenchmarks: React.FC = () => {
     }
   ];
 
-  // 动画效果
+  // Animation effects
   useEffect(() => {
     const timer = setTimeout(() => {
       const currentData = benchmarkData[activeTab];
@@ -163,9 +163,9 @@ const PerformanceBenchmarks: React.FC = () => {
     return () => clearTimeout(timer);
   }, [activeTab]);
 
-  // 获取条形图宽度百分比
+  // Get bar chart width percentage
   const getBarWidth = (value: number, maxValue: number) => {
-    return Math.max((value / maxValue) * 100, 5); // 最小5%确保可见性
+    return Math.max((value / maxValue) * 100, 5); // Minimum 5% to ensure visibility
   };
 
   const currentData = benchmarkData[activeTab];
@@ -179,11 +179,11 @@ const PerformanceBenchmarks: React.FC = () => {
             Performance Benchmarks
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            See how Qwen3-Coder outperforms the competition with superior speed, quality, and efficiency metrics
+            See how Nano Banana AI analysis outperforms traditional methods with superior depth, accuracy, and insight metrics
           </p>
         </div>
 
-        {/* 实时性能指标 */}
+        {/* Real-time performance metrics */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {performanceMetrics.map((metric, index) => {
             const IconComponent = metric.icon;
@@ -211,7 +211,7 @@ const PerformanceBenchmarks: React.FC = () => {
           })}
         </div>
 
-        {/* 基准测试标签 */}
+        {/* Benchmark test tabs */}
         <div className="flex justify-center mb-12">
           <div className="bg-gray-800 rounded-xl p-2 border border-gray-700">
             {Object.keys(benchmarkData).map((tab) => (
@@ -232,7 +232,7 @@ const PerformanceBenchmarks: React.FC = () => {
           </div>
         </div>
 
-        {/* 基准测试图表 */}
+        {/* Benchmark test charts */}
         <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
           <div className="grid gap-8">
             {currentData.map((item, index) => {
@@ -255,9 +255,9 @@ const PerformanceBenchmarks: React.FC = () => {
                   <p className="text-sm text-gray-400 mb-4">{item.description}</p>
                   
                   <div className="space-y-3">
-                    {/* Qwen3-Coder Bar */}
+                    {/* Nano Banana AI Bar */}
                     <div className="flex items-center gap-4">
-                      <div className="w-24 text-sm font-medium text-blue-400">Qwen3-Coder</div>
+                      <div className="w-24 text-sm font-medium text-blue-400">Nano Banana AI</div>
                       <div className="flex-1 bg-gray-700 rounded-full h-6 relative overflow-hidden">
                         <div 
                           className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full transition-all duration-1000 ease-out flex items-center justify-end pr-2"
@@ -291,7 +291,7 @@ const PerformanceBenchmarks: React.FC = () => {
           </div>
         </div>
 
-        {/* 底部说明 */}
+        {/* Bottom description */}
         <div className="text-center mt-12 animate-on-scroll">
           <p className="text-gray-400 max-w-2xl mx-auto">
             Benchmarks conducted using industry-standard testing methodologies. 

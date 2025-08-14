@@ -1,32 +1,62 @@
 {
-  "name": "qwen3-coder",
+  "name": "nano-banana-ai",
   "version": "1.0.0",
-  "description": "Qwen3-Coder - 新一代AI代码助手展示平台",
+  "description": "Nano Banana AI - Google未公开图像生成模型分析平台",
   "scripts": {
+    "start": "concurrently \"cd frontend && npm run dev\" \"cd backend && npm run dev\"",
     "dev": "cd frontend && npm run dev",
     "build": "cd frontend && npm run build",
     "preview": "cd frontend && npm run preview",
     "install:frontend": "cd frontend && npm install",
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "install:all": "npm install && cd frontend && npm install",
     "clean": "rm -rf frontend/dist && rm -rf frontend/node_modules/.cache",
     "deploy:prepare": "npm run clean && npm run install:frontend && npm run build",
     "dev:frontend": "cd frontend && npm run dev",
     "build:frontend": "cd frontend && npm run build",
-    "install:all": "npm install && cd frontend && npm install",
-    "test:frontend": "cd frontend && npm run test"
+    "test:frontend": "cd frontend && npm run test",
+    "mcp:start": "node start-mcp-server.js",
+    "mcp:test": "npx @browsermcp/mcp test",
+    "mcp:install": "npx playwright install",
+    "browser-tools:start": "node start-browser-tools.js",
+    "browser-tools:test": "npx browser-tools-mcp test",
+    "browser-tools:install": "npm install browser-tools-mcp",
+    "test:browser": "npx playwright test",
+    "test:all": "npm run test:browser",
+    "test:ci": "npm run test:browser -- --reporter=github",
+    "test:verify": "node test-setup-verification.js",
+    "test:lighthouse": "npx lhci autorun",
+    "test:debug": "npx playwright test --debug",
+    "test:report": "npx playwright show-report",
+    "deploy:cloudflare": "./scripts/deploy-cloudflare.sh production",
+    "deploy:cloudflare:staging": "./scripts/deploy-cloudflare.sh staging",
+    "wrangler:login": "wrangler login",
+    "wrangler:install": "npm install -g wrangler"
   },
   "keywords": [
-    "qwen3-coder",
-    "qwen3",
+    "nano-banana",
     "ai",
-    "code-generation",
-    "programming-assistant",
-    "alibaba-ai",
-    "coding-ai",
-    "developer-tools"
+    "image-generation",
+    "google",
+    "lightweight-model",
+    "computer-vision",
+    "artificial-intelligence",
+    "research",
+    "analysis",
+    "image-editing"
   ],
-  "author": "Qwen3-Coder Team",
+  "author": "Nano Banana AI Research Team",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nanobananaimage/nanobanana-website"
+  },
+  "homepage": "https://nanobananaimage.org",
+  "bugs": {
+    "url": "https://github.com/nanobananaimage/nanobanana-website/issues"
+  },
   "devDependencies": {
+    "@playwright/test": "^1.40.0",
     "concurrently": "^8.2.0"
   },
   "workspaces": [
@@ -34,6 +64,8 @@
     "backend"
   ],
   "dependencies": {
+    "@browsermcp/mcp": "^0.1.3",
+    "browser-tools-mcp": "^1.2.1",
     "puppeteer": "^24.14.0"
   }
 }

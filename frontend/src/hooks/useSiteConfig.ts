@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-// 配置文件类型定义
+// Configuration file type definitions
 export interface SiteConfig {
   site: {
     name: string;
@@ -205,7 +205,7 @@ export const useSiteConfig = () => {
       try {
         setLoading(true);
         
-        // 并行加载所有配置文件
+        // Load all configuration files in parallel
         const [siteResponse, contentResponse, seoResponse, themeResponse] = await Promise.all([
           fetch('/config/site-config.json'),
           fetch('/config/content-config.json'),
@@ -246,12 +246,12 @@ export const useSiteConfig = () => {
     themeConfig,
     loading,
     error,
-    // 辅助方法
+    // Helper methods
     isReady: !loading && !error && siteConfig && contentConfig && seoConfig && themeConfig
   };
 };
 
-// 获取特定页面的SEO配置
+// Get SEO configuration for specific page
 export const usePageSEO = (pageName: string) => {
   const { seoConfig } = useSiteConfig();
   
@@ -269,13 +269,13 @@ export const usePageSEO = (pageName: string) => {
   };
 };
 
-// 获取主题颜色
+// Get theme colors
 export const useThemeColors = () => {
   const { themeConfig } = useSiteConfig();
   return themeConfig?.colors || null;
 };
 
-// 获取响应式断点
+// Get responsive breakpoints
 export const useBreakpoints = () => {
   const { themeConfig } = useSiteConfig();
   return themeConfig?.breakpoints || null;

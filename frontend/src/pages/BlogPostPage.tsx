@@ -2,25 +2,25 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 /**
- * Qwen3-Coder Blog Post Detail Page
+ * Nano Banana AI Blog Post Detail Page
  * Display complete content of individual blog posts
  */
 const BlogPostPage: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
   const [post, setPost] = useState<any>(null);
 
-  // 博客文章数据库（实际项目中应该从API获取）
+  // Blog posts database (should be fetched from API in real projects)
   const blogPosts = {
     'ai-video-generation-revolution': {
       id: 'ai-video-generation-revolution',
-      title: 'The AI Code Generation Revolution: How Qwen3-Coder is Changing Software Development',
+      title: 'The AI Model Analysis Revolution: How Nano Banana AI is Transforming Research',
       excerpt: 'Discover how artificial intelligence is transforming video creation, from simple images to stunning cosmic zoom effects that captivate audiences worldwide.',
       content: `
         <h2>Introduction: The Dawn of AI-Powered Visual Storytelling</h2>
-        <p>The landscape of software development has undergone a revolutionary transformation in recent years, driven by breakthroughs in artificial intelligence and machine learning. At the forefront of this revolution stands Qwen3-Coder, a groundbreaking platform that has redefined what's possible in automated code generation.</p>
+        <p>The landscape of AI research has undergone a revolutionary transformation in recent years, driven by breakthroughs in model analysis and understanding. At the forefront of this revolution stands Nano Banana AI, a groundbreaking platform that has redefined what's possible in AI model analysis and interpretation.</p>
         
         <h2>The Technology Behind the Magic</h2>
-        <p>Qwen3-Coder leverages a sophisticated four-layer architecture that seamlessly transforms natural language requirements into production-ready code:</p>
+        <p>Nano Banana AI leverages a sophisticated four-layer architecture that seamlessly transforms complex AI models into understandable insights:</p>
         
         <h3>1. Requirements Analysis Layer</h3>
         <p>Our advanced natural language processing algorithms analyze every aspect of the input requirements, identifying key components, architectural patterns, and optimal implementation strategies. This process involves:</p>
@@ -55,7 +55,7 @@ const BlogPostPage: React.FC = () => {
         <h2>Impact Across Industries</h2>
         
         <h3>Educational Revolution</h3>
-        <p>Universities and educational institutions have reported remarkable results using Qwen3-Coder:</p>
+        <p>Universities and research institutions have reported remarkable results using Nano Banana AI:</p>
         <ul>
           <li><strong>95% improvement</strong> in student engagement with visual learning materials</li>
           <li><strong>87% increase</strong> in concept retention rates</li>
@@ -79,15 +79,15 @@ const BlogPostPage: React.FC = () => {
         </ul>
         
         <h2>The Science of Cognitive Alignment</h2>
-        <p>Research in cognitive psychology reveals why Qwen3-Coder generated code is so effective:</p>
+        <p>Research in cognitive psychology reveals why Nano Banana AI analysis is so effective:</p>
         
         <blockquote>
-          "The human brain is naturally drawn to logical patterns and structured thinking. Qwen3-Coder taps into fundamental cognitive patterns that align with how developers think, creating an almost intuitive coding experience." 
+          "The human brain is naturally drawn to logical patterns and structured thinking. Nano Banana AI taps into fundamental cognitive patterns that align with how researchers think, creating an almost intuitive analysis experience." 
           <cite>- Dr. Emily Rodriguez, Cognitive Psychology Research Institute</cite>
         </blockquote>
         
         <h2>Technical Excellence and Performance</h2>
-        <p>Qwen3-Coder maintains industry-leading performance metrics:</p>
+        <p>Nano Banana AI maintains industry-leading performance metrics:</p>
         <ul>
           <li><strong>99.7% accuracy</strong> in visual continuity maintenance</li>
           <li><strong>4K Ultra HD</strong> output quality as standard</li>
@@ -96,7 +96,7 @@ const BlogPostPage: React.FC = () => {
         </ul>
         
         <h2>Looking Forward: The Future of AI Code Generation</h2>
-        <p>As we advance into 2024 and beyond, Qwen3-Coder continues to pioneer new frontiers in AI-powered code generation. Upcoming developments include:</p>
+        <p>As we advance into 2024 and beyond, Nano Banana AI continues to pioneer new frontiers in AI model analysis. Upcoming developments include:</p>
         <ul>
           <li>Real-time code generation capabilities</li>
           <li>Enhanced multi-language support and architecture optimization</li>
@@ -105,25 +105,25 @@ const BlogPostPage: React.FC = () => {
         </ul>
         
         <h2>Conclusion: Democratizing Professional Software Development</h2>
-        <p>Qwen3-Coder represents more than just a technological advancement—it's a democratization of professional-quality software development. By making sophisticated code generation accessible to everyone, from students to entrepreneurs to enterprises, we're enabling a new era of innovation that was previously limited to expert developers.</p>
+        <p>Nano Banana AI represents more than just a technological advancement—it's a democratization of professional-quality AI research. By making sophisticated model analysis accessible to everyone, from students to researchers to enterprises, we're enabling a new era of innovation that was previously limited to expert AI scientists.</p>
         
-        <p>The revolution in AI code generation is just beginning, and Qwen3-Coder is proud to be leading this transformation. As we continue to innovate and refine our technology, we remain committed to our core mission: empowering developers worldwide to build their solutions with unprecedented efficiency and quality.</p>
+        <p>The revolution in AI model analysis is just beginning, and Nano Banana AI is proud to be leading this transformation. As we continue to innovate and refine our technology, we remain committed to our core mission: empowering researchers worldwide to understand AI models with unprecedented depth and clarity.</p>
       `,
       date: '2024-01-15',
       readTime: '8 min read',
       category: 'Technology',
       tags: ['AI Video', 'Technology', 'Innovation', 'Visual Storytelling'],
-      image: '/images/qwen3-coder/blog/ai-video-revolution.jpg',
-      author: 'Qwen3-Coder Research Team',
+      image: '/images/nano-banana-ai/blog/ai-analysis-revolution.jpg',
+      author: 'Nano Banana AI Research Team',
       authorBio: 'Our research team consists of leading AI scientists, computer vision experts, and video technology specialists dedicated to advancing the field of automated video generation.'
     },
     'educational-applications-case-study': {
       id: 'educational-applications-case-study',
-      title: 'Transforming Education: A Case Study of Qwen3-Coder in Universities',
-      excerpt: 'Explore how leading universities are using Qwen3-Coder to create immersive learning experiences that improve student engagement by 95%.',
+      title: 'Transforming Research: A Case Study of Nano Banana AI in Universities',
+      excerpt: 'Explore how leading universities are using Nano Banana AI to create immersive research experiences that improve understanding by 95%.',
       content: `
         <h2>Executive Summary</h2>
-        <p>This comprehensive case study examines the implementation of Qwen3-Coder technology across five leading universities, documenting unprecedented improvements in student engagement, learning outcomes, and educational content effectiveness.</p>
+        <p>This comprehensive case study examines the implementation of Nano Banana AI technology across five leading universities, documenting unprecedented improvements in research understanding, analysis outcomes, and educational content effectiveness.</p>
         
         <h2>Participating Institutions</h2>
         <ul>
@@ -135,7 +135,7 @@ const BlogPostPage: React.FC = () => {
         </ul>
         
         <h2>Implementation Methodology</h2>
-        <p>Each institution integrated Qwen3-Coder into their curriculum over a 12-month period, following a structured implementation framework:</p>
+        <p>Each institution integrated Nano Banana AI into their curriculum over a 12-month period, following a structured implementation framework:</p>
         
         <h3>Phase 1: Baseline Assessment (Months 1-2)</h3>
         <ul>
@@ -172,7 +172,7 @@ const BlogPostPage: React.FC = () => {
         <h2>Quantitative Results</h2>
         
         <h3>Student Engagement Metrics</h3>
-        <p>Across all participating institutions, Qwen3-Coder implementation yielded remarkable improvements:</p>
+        <p>Across all participating institutions, Nano Banana AI implementation yielded remarkable improvements:</p>
         <ul>
           <li><strong>95% increase</strong> in average lecture attention span</li>
           <li><strong>87% improvement</strong> in assignment completion rates</li>
@@ -200,7 +200,7 @@ const BlogPostPage: React.FC = () => {
         
         <h3>Stanford University - Computer Science Department</h3>
         <blockquote>
-          "Qwen3-Coder has revolutionized how we teach complex algorithms and data structures. Students can now visualize abstract concepts from the micro-level code structure all the way to system-wide implementations. The AI-generated examples help them understand the bigger picture in ways traditional teaching methods never could."
+          "Nano Banana AI has revolutionized how we teach complex AI models and architectures. Students can now visualize abstract concepts from the micro-level model structure all the way to system-wide implementations. The AI analysis helps them understand the bigger picture in ways traditional teaching methods never could."
           <cite>- Dr. Jennifer Walsh, Professor of Computer Science</cite>
         </blockquote>
         
@@ -212,7 +212,7 @@ const BlogPostPage: React.FC = () => {
         
         <h3>MIT - Astronomy Program</h3>
         <blockquote>
-          "Qwen3-Coder perfectly aligns with computer science education. Starting from basic programming concepts and scaling up to complex system architectures has made programming more accessible and inspiring for students."
+          "Nano Banana AI perfectly aligns with AI research education. Starting from basic model concepts and scaling up to complex architectures has made AI research more accessible and inspiring for students."
           <cite>- Dr. Sarah Kim, Professor of Astrophysics</cite>
         </blockquote>
         
@@ -253,7 +253,7 @@ const BlogPostPage: React.FC = () => {
         <h2>Student Feedback Highlights</h2>
         
         <p><strong>Emma Rodriguez, Stanford Computer Science Student:</strong><br>
-        "I never understood how my code fits into larger systems until I worked with Qwen3-Coder. It's like seeing the matrix for the first time - everything suddenly makes sense."</p>
+        "I never understood how AI models work internally until I worked with Nano Banana AI. It's like seeing the matrix for the first time - everything suddenly makes sense."</p>
         
         <p><strong>James Chen, Harvard Medical Student:</strong><br>
         "Studying anatomy used to be about memorizing isolated facts. Now I see how everything connects from molecules to the whole body. It's completely changed how I understand medicine."</p>
@@ -283,7 +283,7 @@ const BlogPostPage: React.FC = () => {
         
         <h2>Return on Investment Analysis</h2>
         
-        <p>The economic impact of Qwen3-Coder implementation proved substantial:</p>
+        <p>The economic impact of Nano Banana AI implementation proved substantial:</p>
         <ul>
           <li><strong>Content Creation Efficiency:</strong> $2.3M saved annually across all institutions</li>
           <li><strong>Student Retention Improvement:</strong> $1.8M additional revenue from increased enrollment</li>
@@ -293,7 +293,7 @@ const BlogPostPage: React.FC = () => {
         
         <h2>Future Expansion Plans</h2>
         
-        <p>Based on the success of this pilot program, participating institutions have committed to expanding Qwen3-Coder integration:</p>
+        <p>Based on the success of this pilot program, participating institutions have committed to expanding Nano Banana AI integration:</p>
         <ul>
           <li>Extension to graduate-level programs</li>
           <li>Integration with virtual and augmented reality platforms</li>
@@ -303,7 +303,7 @@ const BlogPostPage: React.FC = () => {
         
         <h2>Conclusion and Recommendations</h2>
         
-        <p>This case study demonstrates that Qwen3-Coder technology delivers transformative results in educational settings. The combination of increased student engagement, improved learning outcomes, and enhanced faculty productivity creates a compelling case for widespread adoption in higher education.</p>
+        <p>This case study demonstrates that Nano Banana AI technology delivers transformative results in educational settings. The combination of increased student engagement, improved learning outcomes, and enhanced faculty productivity creates a compelling case for widespread adoption in higher education.</p>
         
         <p><strong>Key Recommendations for Educational Institutions:</strong></p>
         <ol>
@@ -314,13 +314,13 @@ const BlogPostPage: React.FC = () => {
           <li>Create student feedback loops for continuous improvement</li>
         </ol>
         
-        <p>The evidence is clear: Qwen3-Coder represents a paradigm shift in educational technology, offering unprecedented opportunities to enhance learning experiences and outcomes across diverse academic disciplines.</p>
+        <p>The evidence is clear: Nano Banana AI represents a paradigm shift in educational technology, offering unprecedented opportunities to enhance learning experiences and outcomes across diverse academic disciplines.</p>
       `,
       date: '2024-01-12',
       readTime: '6 min read',
       category: 'Education',
       tags: ['Education', 'Case Study', 'Universities', 'Student Engagement'],
-      image: '/images/qwen3-coder/blog/education-case-study.jpg',
+      image: '/images/nano-banana-ai/blog/education-case-study.jpg',
       author: 'Dr. Sarah Chen, Education Technology Specialist',
       authorBio: 'Dr. Chen is a leading researcher in educational technology with over 15 years of experience studying the impact of digital tools on learning outcomes.'
     }
@@ -331,16 +331,16 @@ const BlogPostPage: React.FC = () => {
       const currentPost = blogPosts[postId as keyof typeof blogPosts];
       setPost(currentPost);
       
-      // SEO优化 - 设置页面标题和描述
-      document.title = `${currentPost.title} | Qwen3-Coder Blog`;
+      // SEO optimization - set page title and description
+      document.title = `${currentPost.title} | Nano Banana AI Blog`;
       
-      // 更新meta描述
+      // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute('content', currentPost.excerpt);
       }
 
-      // 添加Article结构化数据
+      // Add Article structured data
       const articleSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -348,7 +348,7 @@ const BlogPostPage: React.FC = () => {
         "description": currentPost.excerpt,
         "image": {
           "@type": "ImageObject",
-          "url": `https://qwen3coder.com${currentPost.image}`,
+          "url": `https://nanobanana-ai.com${currentPost.image}`,
           "width": 1200,
           "height": 630
         },
@@ -359,10 +359,10 @@ const BlogPostPage: React.FC = () => {
         },
         "publisher": {
           "@type": "Organization",
-          "name": "Qwen3-Coder",
+          "name": "Nano Banana AI",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://qwen3coder.com/images/qwen3-coder/logos/qwen3-coder-logo.png",
+            "url": "https://nanobanana-ai.com/images/nano-banana-ai/logos/nano-banana-ai-logo.png",
             "width": 400,
             "height": 120
           }
@@ -371,7 +371,7 @@ const BlogPostPage: React.FC = () => {
         "dateModified": `${currentPost.date}T12:00:00Z`,
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": `https://qwen3coder.com/blog/${currentPost.id}`
+          "@id": `https://nanobanana-ai.com/blog/${currentPost.id}`
         },
         "articleSection": currentPost.category,
         "keywords": currentPost.tags.join(", "),
@@ -386,13 +386,13 @@ const BlogPostPage: React.FC = () => {
           },
           {
             "@type": "Thing",
-            "name": "Qwen3-Coder",
+            "name": "Nano Banana AI",
             "description": "Revolutionary video generation platform"
           }
         ]
       };
 
-      // 添加面包屑导航结构化数据
+      // Add breadcrumb navigation structured data
       const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -401,24 +401,24 @@ const BlogPostPage: React.FC = () => {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://qwen3coder.com"
+            "item": "https://nanobanana-ai.com"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Blog",
-            "item": "https://qwen3coder.com/blog"
+            "item": "https://nanobanana-ai.com/blog"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": currentPost.title,
-            "item": `https://qwen3coder.com/blog/${currentPost.id}`
+            "item": `https://nanobanana-ai.com/blog/${currentPost.id}`
           }
         ]
       };
 
-      // 添加到页面head
+      // Add to page head
       const articleScript = document.createElement('script');
       articleScript.type = 'application/ld+json';
       articleScript.textContent = JSON.stringify(articleSchema);
@@ -429,7 +429,7 @@ const BlogPostPage: React.FC = () => {
       breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
       document.head.appendChild(breadcrumbScript);
 
-      // 清理函数
+      // Cleanup function
       return () => {
         const scripts = document.querySelectorAll('script[type="application/ld+json"]');
         scripts.forEach(script => {
@@ -458,10 +458,10 @@ const BlogPostPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero区域 */}
+      {/* Hero section */}
       <section className="relative py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
-          {/* 面包屑导航 */}
+          {/* Breadcrumb navigation */}
           <nav className="text-gray-600 text-sm mb-8">
             <Link to="/" className="hover:text-earth-blue">Home</Link>
             <span className="mx-2">/</span>
@@ -470,9 +470,9 @@ const BlogPostPage: React.FC = () => {
             <span className="text-gray-900">{post.title}</span>
           </nav>
 
-          {/* 文章头部 */}
+          {/* Article header */}
           <div className="max-w-4xl mx-auto">
-            {/* 分类和阅读时间 */}
+            {/* Category and reading time */}
             <div className="flex items-center gap-4 mb-6">
               <span className="px-3 py-1 bg-earth-blue/10 text-earth-blue text-sm font-medium rounded-full">
                 {post.category}
@@ -487,17 +487,17 @@ const BlogPostPage: React.FC = () => {
               </span>
             </div>
 
-            {/* 标题 */}
+            {/* Title */}
             <h1 className="text-4xl md:text-5xl font-bold text-space-dark mb-6 leading-tight">
               {post.title}
             </h1>
 
-            {/* 摘要 */}
+            {/* Summary */}
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               {post.excerpt}
             </p>
 
-            {/* 作者信息 */}
+            {/* Author information */}
             <div className="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
               <div className="w-12 h-12 bg-earth-blue/10 rounded-full flex items-center justify-center">
                 <svg className="w-6 h-6 text-earth-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -513,7 +513,7 @@ const BlogPostPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 文章主图 */}
+      {/* Article main image */}
       <section className="mb-12">
         <div className="max-w-6xl mx-auto px-4">
           <img 
@@ -524,7 +524,7 @@ const BlogPostPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 文章内容 */}
+      {/* Article content */}
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4">
           <div 
@@ -543,7 +543,7 @@ const BlogPostPage: React.FC = () => {
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
-          {/* 标签 */}
+          {/* Tags */}
           <div className="mt-12 pt-8 border-t border-gray-200">
             <div className="flex flex-wrap gap-2">
               <span className="text-gray-600 font-medium mr-4">Tags:</span>
@@ -560,7 +560,7 @@ const BlogPostPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 分享区域 */}
+      {/* Share section */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h3 className="text-2xl font-bold text-space-dark mb-6">Share This Article</h3>
@@ -587,12 +587,12 @@ const BlogPostPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 相关文章推荐 */}
+      {/* Related articles recommendation */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h3 className="text-3xl font-bold text-space-dark text-center mb-12">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* 这里可以添加相关文章的逻辑 */}
+            {/* Logic for related articles can be added here */}
             <div className="card hover:shadow-lg transition-shadow duration-300 bg-white border border-gray-100 rounded-xl overflow-hidden">
               <div className="aspect-video bg-gray-200"></div>
               <div className="p-6">
@@ -611,7 +611,7 @@ const BlogPostPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 返回博客列表 */}
+      {/* Back to blog list */}
       <section className="py-8 bg-gray-50 border-t">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <Link 

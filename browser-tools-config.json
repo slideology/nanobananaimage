@@ -1,0 +1,93 @@
+{
+  "name": "qwen3-coder-browser-tools",
+  "version": "1.0.0",
+  "description": "Browser Tools MCP Configuration for Qwen3-Coder Project",
+  "server": {
+    "host": "localhost",
+    "port": 3334,
+    "timeout": 30000,
+    "maxConnections": 10
+  },
+  "browser": {
+    "engine": "chromium",
+    "headless": false,
+    "devtools": true,
+    "slowMo": 100,
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-web-security",
+      "--allow-running-insecure-content",
+      "--disable-features=VizDisplayCompositor"
+    ],
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  },
+  "tools": {
+    "screenshot": {
+      "enabled": true,
+      "quality": 90,
+      "fullPage": true,
+      "path": "./screenshots"
+    },
+    "scraping": {
+      "enabled": true,
+      "waitForSelector": true,
+      "timeout": 10000,
+      "extractText": true,
+      "extractLinks": true,
+      "extractImages": true
+    },
+    "automation": {
+      "enabled": true,
+      "clickDelay": 100,
+      "typeDelay": 50,
+      "navigationTimeout": 30000
+    },
+    "testing": {
+      "enabled": true,
+      "baseUrl": "http://localhost:3002",
+      "retries": 2,
+      "parallel": false
+    }
+  },
+  "security": {
+    "allowedDomains": [
+      "localhost",
+      "127.0.0.1",
+      "qwen3-coder.vercel.app",
+      "*.vercel.app",
+      "github.com",
+      "*.github.com"
+    ],
+    "blockedResources": [
+      "*.ads.txt",
+      "*google-analytics*",
+      "*clarity.ms*",
+      "*facebook.com/tr*",
+      "*twitter.com/i/adsct*"
+    ]
+  },
+  "logging": {
+    "level": "info",
+    "console": true,
+    "file": {
+      "enabled": true,
+      "path": "./logs/browser-tools.log",
+      "maxSize": "10MB",
+      "maxFiles": 5
+    }
+  },
+  "features": {
+    "webScraping": true,
+    "automation": true,
+    "testing": true,
+    "screenshots": true,
+    "pdfGeneration": true,
+    "performanceMonitoring": true
+  }
+}

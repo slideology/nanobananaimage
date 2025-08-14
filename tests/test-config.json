@@ -1,0 +1,184 @@
+{
+  "environments": {
+    "local": {
+      "baseUrl": "http://localhost:3002",
+      "name": "本地开发环境",
+      "timeout": 30000,
+      "retries": 2
+    },
+    "staging": {
+      "baseUrl": "https://nano-banana-ai-staging.vercel.app",
+      "name": "预发布环境",
+      "timeout": 45000,
+      "retries": 3
+    },
+    "production": {
+      "baseUrl": "https://nano-banana-ai.vercel.app",
+      "name": "生产环境",
+      "timeout": 60000,
+      "retries": 3
+    }
+  },
+  "browsers": {
+    "chromium": {
+      "name": "Chromium",
+      "args": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-dev-shm-usage",
+        "--disable-gpu"
+      ]
+    },
+    "firefox": {
+      "name": "Firefox",
+      "args": []
+    },
+    "webkit": {
+      "name": "WebKit (Safari)",
+      "args": []
+    }
+  },
+  "devices": {
+    "desktop": {
+      "name": "桌面端",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    },
+    "tablet": {
+      "name": "平板端",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "userAgent": "Mozilla/5.0 (iPad; CPU OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+    },
+    "mobile": {
+      "name": "移动端",
+      "viewport": {
+        "width": 375,
+        "height": 667
+      },
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+    }
+  },
+  "testSuites": {
+    "smoke": {
+      "name": "冒烟测试",
+      "description": "快速验证核心功能",
+      "tests": [
+        "HomePageLoadTest",
+        "NavigationTest"
+      ],
+      "timeout": 10000
+    },
+    "regression": {
+      "name": "回归测试",
+      "description": "全面功能验证",
+      "tests": [
+        "HomePageLoadTest",
+        "NavigationTest",
+        "ResponsiveDesignTest",
+        "InteractionTest",
+        "PerformanceTest"
+      ],
+      "timeout": 30000
+    },
+    "performance": {
+      "name": "性能测试",
+      "description": "性能指标验证",
+      "tests": [
+        "PerformanceTest",
+        "LoadTimeTest",
+        "ResourceOptimizationTest"
+      ],
+      "timeout": 60000
+    },
+    "accessibility": {
+      "name": "可访问性测试",
+      "description": "无障碍访问验证",
+      "tests": [
+        "KeyboardNavigationTest",
+        "ScreenReaderTest",
+        "ColorContrastTest"
+      ],
+      "timeout": 30000
+    }
+  },
+  "selectors": {
+    "navigation": {
+      "header": "header",
+      "nav": "nav",
+      "logo": "[data-testid='logo']",
+      "menuToggle": "[data-testid='menu-toggle']",
+      "navLinks": "nav a"
+    },
+    "homepage": {
+      "hero": "[data-testid='hero-section']",
+      "features": "#features",
+      "demo": "#demo",
+      "reviews": "#reviews",
+      "faq": "#faq",
+      "footer": "footer"
+    },
+    "interactive": {
+      "faqItems": "[data-testid^='faq-item']",
+      "codeDemo": "[data-testid='code-demo']",
+      "buttons": "button",
+      "forms": "form"
+    }
+  },
+  "performance": {
+    "thresholds": {
+      "firstContentfulPaint": 2000,
+      "largestContentfulPaint": 3000,
+      "cumulativeLayoutShift": 0.1,
+      "totalBlockingTime": 500,
+      "timeToInteractive": 4000
+    },
+    "metrics": [
+      "first-contentful-paint",
+      "largest-contentful-paint",
+      "cumulative-layout-shift",
+      "total-blocking-time",
+      "time-to-interactive"
+    ]
+  },
+  "accessibility": {
+    "standards": ["WCAG2A", "WCAG2AA"],
+    "rules": {
+      "colorContrast": true,
+      "keyboardNavigation": true,
+      "altText": true,
+      "headingStructure": true,
+      "focusManagement": true
+    }
+  },
+  "reporting": {
+    "formats": ["json", "html", "junit"],
+    "screenshots": {
+      "onFailure": true,
+      "onSuccess": false,
+      "fullPage": true
+    },
+    "videos": {
+      "onFailure": true,
+      "onSuccess": false
+    },
+    "outputDir": "./logs",
+    "archiveResults": true,
+    "maxArchives": 10
+  },
+  "parallel": {
+    "enabled": true,
+    "maxWorkers": 4,
+    "shardTests": true
+  },
+  "retry": {
+    "maxRetries": 2,
+    "retryDelay": 1000,
+    "exponentialBackoff": true
+  }
+}

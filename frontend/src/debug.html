@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Config Loading</title>
+</head>
+<body>
+    <h1>Debug Configuration Loading</h1>
+    <div id="results"></div>
+    
+    <script>
+        async function testConfigLoading() {
+            const results = document.getElementById('results');
+            
+            try {
+                results.innerHTML += '<p>Testing configuration file loading...</p>';
+                
+                const configs = [
+                    '/config/site-config.json',
+                    '/config/content-config.json', 
+                    '/config/seo-config.json',
+                    '/config/theme-config.json'
+                ];
+                
+                for (const config of configs) {
+                    try {
+                        const response = await fetch(config);
+                        if (response.ok) {
+                            const data = await response.json();
+                            results.innerHTML += `<p style="color: green;">✓ ${config} loaded successfully</p>`;
+                        } else {
+                            results.innerHTML += `<p style="color: red;">✗ ${config} failed: ${response.status}</p>`;
+                        }
+                    } catch (err) {
+                        results.innerHTML += `<p style="color: red;">✗ ${config} error: ${err.message}</p>`;
+                    }
+                }
+                
+            } catch (err) {
+                results.innerHTML += `<p style="color: red;">General error: ${err.message}</p>`;
+            }
+        }
+        
+        testConfigLoading();
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+name = "nanobananaimage"
+compatibility_date = "2024-01-15"
+
+[env.production]
+name = "nanobananaimage"
+route = "nanobananaimage.org/*"
+
+[env.staging]
+name = "nanobananaimage-staging"
+
+# Pages配置
+[pages]
+build_command = "cd frontend && npm run build"
+build_output_dir = "frontend/dist"
+
+# 环境变量（如果需要）
+[vars]
+ENVIRONMENT = "production"
+
+# 自定义域名配置
+[[pages.custom_domains]]
+domain = "nanobananaimage.org"
+
+[[pages.custom_domains]]
+domain = "www.nanobananaimage.org"

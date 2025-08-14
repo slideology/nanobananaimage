@@ -1,0 +1,185 @@
+{
+  "defaultMeta": {
+    "title": "NANO BANANA AI - Google Unreleased Image Generation Model Analysis",
+    "description": "Discover Google's unreleased Nano Banana AI image generation model. Comprehensive analysis, capabilities exploration, and technical insights into cutting-edge AI image generation technology.",
+    "keywords": "nano banana ai, google ai, image generation, ai model analysis, unreleased ai, google image ai, nano banana model, ai research, image synthesis",
+    "author": "Nano Banana AI Research Team",
+    "robots": "index, follow",
+    "language": "en",
+    "image": "/images/og/default-og-image.webp",
+    "imageAlt": "NANO BANANA AI - Google Unreleased Image Generation Model Analysis"
+  },
+  "titleTemplates": {
+    "home": "{siteName} - {tagline}",
+    "page": "{pageTitle} | {siteName}",
+    "blog": "{postTitle} | {siteName} Blog",
+    "category": "{categoryName} | {siteName}",
+    "tag": "{tagName} | {siteName}"
+  },
+  "descriptionTemplates": {
+    "home": "{siteDescription}",
+    "page": "{pageDescription}",
+    "blog": "{postExcerpt}",
+    "category": "Explore {categoryName} content on {siteName}. {categoryDescription}",
+    "tag": "Browse all content tagged with {tagName} on {siteName}."
+  },
+  "pages": {
+    "home": {
+      "title": "NANO BANANA AI - Google Unreleased Image Generation Model Analysis Platform",
+      "description": "Explore Google's unreleased Nano Banana AI image generation model. In-depth analysis, capability demonstrations, and technical insights into cutting-edge AI image synthesis technology.",
+      "keywords": "nano banana ai, google ai, image generation, ai model analysis, unreleased ai models, google image ai, nano banana model, ai research, image synthesis",
+      "canonicalUrl": "/",
+      "ogImage": "/images/og/home-og-image.webp"
+    },
+    "features": {
+      "title": "Analysis - Nano Banana AI Model Capabilities | Google AI Research",
+      "description": "Comprehensive analysis of Nano Banana AI's image generation capabilities: advanced neural architectures, training methodologies, and performance benchmarks.",
+      "keywords": "nano banana ai analysis, google ai capabilities, image generation features, ai model analysis, neural networks, ai research",
+      "canonicalUrl": "/features",
+      "ogImage": "/images/og/features-og-image.webp"
+    },
+    "showcase": {
+      "title": "Capabilities - Nano Banana AI Image Generation Demos | Google AI",
+      "description": "Explore impressive image generation examples from Google's Nano Banana AI model. See artistic creations, photorealistic outputs, and advanced AI-generated imagery.",
+      "keywords": "nano banana ai examples, google ai showcase, image generation demos, ai art examples, ai image synthesis",
+      "canonicalUrl": "/showcase",
+      "ogImage": "/images/og/showcase-og-image.webp"
+    },
+    "about": {
+      "title": "About Nano Banana AI - Google's Unreleased Image Generation Research",
+      "description": "Learn about Google's Nano Banana AI research project. Discover the cutting-edge technology behind this unreleased image generation model and its potential impact.",
+      "keywords": "about nano banana ai, google ai research, image generation technology, ai model development, google research, ai innovation",
+      "canonicalUrl": "/about",
+      "ogImage": "/images/og/about-og-image.webp"
+    },
+    "pricing": {
+      "title": "Research - Nano Banana AI Model Benchmarks | Google AI Analysis",
+      "description": "Explore comprehensive benchmarks and performance analysis of Google's Nano Banana AI image generation model. Technical specifications and research insights.",
+      "keywords": "nano banana ai benchmarks, google ai research, image generation performance, ai model analysis, research data, ai benchmarks",
+      "canonicalUrl": "/pricing",
+      "ogImage": "/images/og/pricing-og-image.webp"
+    }
+  },
+  "structuredData": {
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NANO BANANA AI",
+      "url": "https://nanobananaimage.org",
+      "logo": "https://nanobananaimage.org/images/logo.png",
+      "description": "Google unreleased image generation model analysis and research platform",
+      "sameAs": [
+        "https://twitter.com/nanobananaai",
+        "https://youtube.com/@nanobananaai",
+        "https://github.com/nanobananaai"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-0123",
+        "contactType": "customer service",
+        "email": "contact@nanobananaimage.org"
+      }
+    },
+    "website": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "NANO BANANA AI",
+      "url": "https://nanobananaimage.org",
+      "description": "Google unreleased Nano Banana AI image generation model analysis platform",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://nanobananaimage.org/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    "softwareApplication": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "NANO BANANA AI",
+      "applicationCategory": "ResearchApplication",
+      "operatingSystem": "Web Browser",
+      "description": "Google unreleased image generation model analysis and research platform",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free tier available with professional options"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "892",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    "faqPage": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": []
+    }
+  },
+  "openGraph": {
+    "type": "website",
+    "siteName": "NANO BANANA AI",
+    "locale": "en_US",
+    "url": "https://nanobananaimage.org",
+    "title": "NANO BANANA AI - Google Unreleased Image Generation Model Analysis",
+    "description": "Explore Google's unreleased Nano Banana AI image generation model. Comprehensive analysis and technical insights into cutting-edge AI technology.",
+    "image": "https://nanobananaimage.org/images/og/default-og-image.webp",
+    "imageAlt": "NANO BANANA AI - Google AI image generation model analysis",
+    "imageWidth": 1200,
+    "imageHeight": 630,
+    "imageType": "image/webp"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@nanobananaai",
+    "creator": "@nanobananaai",
+    "title": "NANO BANANA AI - Google Unreleased Image Generation Model Analysis",
+    "description": "Explore Google's unreleased Nano Banana AI image generation model. Comprehensive analysis and technical insights into cutting-edge AI technology.",
+    "image": "https://nanobananaimage.org/images/twitter/default-twitter-card.webp",
+    "imageAlt": "NANO BANANA AI - Google AI image generation model analysis"
+  },
+  "keywords": {
+    "primary": [
+      "nano banana ai",
+      "google ai",
+      "image generation",
+      "ai model analysis",
+      "unreleased ai",
+      "google image ai"
+    ],
+    "secondary": [
+      "ai research",
+      "image synthesis",
+      "neural networks",
+      "ai benchmarks",
+      "google research",
+      "ai innovation"
+    ],
+    "longTail": [
+      "google unreleased ai models",
+      "nano banana image generation analysis",
+      "google ai research projects",
+      "advanced image synthesis technology",
+      "ai model performance analysis",
+      "cutting edge image generation ai"
+    ],
+    "semantic": [
+      "machine learning",
+      "artificial intelligence",
+      "computer vision",
+      "deep learning",
+      "neural architecture",
+      "ai model development"
+    ]
+  },
+  "hreflang": {
+    "en": "https://nanobananaimage.org",
+    "es": "https://nanobananaimage.org/es",
+    "fr": "https://nanobananaimage.org/fr",
+    "de": "https://nanobananaimage.org/de",
+    "zh": "https://nanobananaimage.org/zh"
+  }
+}

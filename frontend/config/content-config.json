@@ -1,231 +1,231 @@
 {
   "hero": {
-    "title": "Qwen3-Coder",
-    "subtitle": "Next-generation AI programming assistant that makes code generation simple and efficient. From requirements to implementation in just seconds.",
-    "description": "Experience revolutionary AI code generation technology. Input your requirements and watch how we transform ideas into production-ready code, from concept to deployment in one step.",
+    "title": "Nano•Banana",
+    "subtitle": "Google's Unreleased AI Image Generation Model",
+    "description": "Comprehensive analysis of the speculative Nano-Banana AI model. Discover revolutionary image generation capabilities, technical insights, and performance benchmarks of Google's mysterious lightweight model.",
     "primaryCta": {
-      "text": "Start Coding Now",
-      "link": "https://qwen3coder.com/try",
+      "text": "Explore Analysis",
+      "link": "/analysis",
       "style": "primary"
     },
     "secondaryCta": {
-      "text": "View Code Examples",
-      "link": "#showcase",
+      "text": "View Capabilities",
+      "link": "/capabilities",
       "style": "secondary"
     },
-    "backgroundImage": "/images/backgrounds/code-hero.webp",
+    "backgroundImage": "/images/nano-banana/hero-gradient-bg.webp",
     "badges": [
-      "Second-level Code Generation",
-      "AI-Powered",
-      "50+ Programming Languages",
-      "Enterprise Security"
+      "Lightweight Architecture",
+      "Advanced Image Generation",
+      "Superior Editing Capabilities",
+      "Anonymous Community Tested"
     ]
   },
   "features": {
-    "title": "Powerful Features",
-    "subtitle": "Everything you need to build production-grade code",
+    "title": "Revolutionary AI Model Capabilities",
+    "subtitle": "Discover what makes Nano-Banana a breakthrough in image generation",
     "items": [
       {
-        "id": "intelligent-code-generation",
-        "title": "Intelligent Code Generation",
-        "description": "From simple requirements to complete implementation, intelligent code generation technology accelerates your development process and provides high-quality, maintainable code solutions.",
-        "icon": "code",
-        "image": "/images/showcase/code-generation.webp",
+        "id": "lightweight-architecture",
+        "title": "Nano Architecture",
+        "description": "Inspired by Google's Gemini Nano, this lightweight model delivers powerful image generation with optimized resource usage, making advanced AI accessible on various platforms.",
+        "icon": "cpu",
+        "image": "/images/nano-banana/nano-architecture.webp",
         "benefits": [
-          "Natural Language to Code",
-          "Intelligent Architecture Design",
-          "Best Practices Integration"
+          "Optimized Resource Usage",
+          "Scalable Deployment",
+          "Edge Computing Ready"
         ]
       },
       {
-        "id": "multi-language-support",
-        "title": "Multi-Language Support",
-        "description": "Support for 50+ programming languages including Python, JavaScript, Java, Go, Rust, and more, meeting the development needs of different technology stacks.",
-        "icon": "globe",
-        "image": "/images/showcase/multi-language.webp",
+        "id": "complex-scene-generation",
+        "title": "Complex Scene Generation",
+        "description": "Exceptional ability to generate intricate scenes in single prompts, from surreal insect macro photography to expansive sci-fi landscapes with remarkable detail accuracy.",
+        "icon": "image",
+        "image": "/images/nano-banana/complex-scenes.webp",
         "benefits": [
-          "50+ Programming Languages",
-          "Cross-Platform Frameworks",
-          "Language-Specific Optimization"
+          "Single-Prompt Complexity",
+          "Photorealistic Details",
+          "Creative Composition"
         ]
       },
       {
-        "id": "agentic-programming",
-        "title": "Agentic Programming",
-        "description": "AI programming assistant with multi-turn interaction, intelligent planning, and autonomous decision-making capabilities, able to understand complex requirements and provide optimal solutions.",
+        "id": "superior-editing",
+        "title": "\"Amazing\" Image Editing",
+        "description": "Community testers report superior image editing capabilities compared to OpenAI models, excelling in image inpainting, outpainting, and content-aware modifications.",
+        "icon": "edit",
+        "image": "/images/nano-banana/image-editing.webp",
+        "benefits": [
+          "Advanced Inpainting",
+          "Seamless Outpainting",
+          "Content-Aware Editing"
+        ]
+      },
+      {
+        "id": "prompt-following",
+        "title": "Exceptional Prompt Following",
+        "description": "Demonstrates remarkable ability to understand and execute complex textual descriptions, maintaining consistency across multiple elements and artistic styles.",
         "icon": "brain",
-        "image": "/images/showcase/agentic-programming.webp",
+        "image": "/images/nano-banana/prompt-following.webp",
         "benefits": [
-          "Multi-Turn Dialogue Interaction",
-          "Intelligent Task Planning",
-          "Autonomous Problem Solving"
+          "Complex Instruction Understanding",
+          "Multi-Element Consistency",
+          "Style Preservation"
         ]
       },
       {
-        "id": "long-context-understanding",
-        "title": "Long Context Understanding",
-        "description": "Support for 256K tokens of long context, expandable to 1M tokens, capable of understanding and processing complete codebases of large projects.",
-        "icon": "file-text",
-        "image": "/images/showcase/long-context.webp",
+        "id": "banana-heritage",
+        "title": "\"Banana\" Legacy",
+        "description": "Named after the 2018 Google research on adversarial attacks where AI misidentified bananas as toasters, symbolizing the evolution from recognition errors to generation mastery.",
+        "icon": "history",
+        "image": "/images/nano-banana/banana-legacy.webp",
         "benefits": [
-          "256K Tokens Support",
-          "Complete Project Understanding",
-          "Contextual Correlation Analysis"
+          "Adversarial Research Foundation",
+          "Recognition to Generation Evolution",
+          "Google AI Heritage"
         ]
       },
       {
-        "id": "ide-integration",
-        "title": "Deep IDE Integration",
-        "description": "Seamlessly integrate with mainstream IDEs like VS Code, IntelliJ, Vim, providing plugins, APIs, and command-line tools to fit into your development workflow.",
-        "icon": "monitor",
-        "image": "/images/showcase/ide-integration.webp",
+        "id": "anonymous-validation",
+        "title": "Community Validated",
+        "description": "Tested anonymously on Chatbot Arena (lmarena.ai) by the AI community, receiving praise for performance that exceeds expectations and surpasses established models.",
+        "icon": "users",
+        "image": "/images/nano-banana/community-testing.webp",
         "benefits": [
-          "Mainstream IDE Support",
-          "Plugin Ecosystem",
-          "Workflow Integration"
-        ]
-      },
-      {
-        "id": "enterprise-security",
-        "title": "Enterprise-Grade Security",
-        "description": "SOC 2 Type II compliant, AES-256 encryption, code privacy protection, on-premises deployment support, meeting enterprise-level security requirements.",
-        "icon": "shield",
-        "image": "/images/showcase/enterprise-security.webp",
-        "benefits": [
-          "SOC 2 Compliance",
-          "Code Privacy Protection",
-          "On-Premises Deployment Options"
+          "Anonymous Community Testing",
+          "Chatbot Arena Validation",
+          "Peer Recognition"
         ]
       }
     ]
   },
   "showcase": {
-    "title": "Qwen3-Coder Live Demonstrations",
-    "subtitle": "Explore amazing code solutions created by our community",
+    "title": "Nano-Banana Capability Demonstrations",
+    "subtitle": "Explore impressive image generation and editing examples",
     "items": [
       {
         "id": "showcase-1",
-        "title": "Full-stack Web Application",
-        "description": "From requirements to complete React + Node.js application, including frontend UI, backend API and database design.",
-        "codeUrl": "/demos/fullstack-app",
-        "thumbnailUrl": "/images/showcase/fullstack-app-thumb.webp",
+        "title": "Surreal Macro Photography",
+        "description": "Hyperrealistic macro photography of insects with crystalline features, demonstrating exceptional detail generation and creative composition capabilities.",
+        "codeUrl": "/capabilities#macro",
+        "thumbnailUrl": "/images/nano-banana/showcase/macro-thumb.webp",
         "complexity": "Advanced",
-        "category": "Full-stack Development",
-        "tags": ["React", "Node.js", "MongoDB", "REST API"]
+        "category": "Photorealistic Generation",
+        "tags": ["Macro", "Surreal", "Photorealistic", "Detail"]
       },
       {
         "id": "showcase-2",
-        "title": "AI Algorithm Implementation",
-        "description": "From algorithm description to complete machine learning model implementation, including data preprocessing, model training and inference code.",
-        "codeUrl": "/demos/ml-algorithm",
-        "thumbnailUrl": "/images/showcase/ml-algorithm-thumb.webp",
+        "title": "Science Fiction Landscapes",
+        "description": "Complex futuristic cityscapes and alien environments generated in single prompts, showcasing multi-element scene composition and atmospheric effects.",
+        "codeUrl": "/capabilities#scifi",
+        "thumbnailUrl": "/images/nano-banana/showcase/scifi-thumb.webp",
         "complexity": "Expert",
-        "category": "Artificial Intelligence",
-        "tags": ["Python", "TensorFlow", "Deep Learning", "Data Science"]
+        "category": "Complex Scene Generation",
+        "tags": ["Sci-Fi", "Architecture", "Atmospheric", "Futuristic"]
       },
       {
         "id": "showcase-3",
-        "title": "Microservices Architecture",
-        "description": "Design and implement complete microservices architecture, including service discovery, load balancing, and containerized deployment configuration.",
-        "codeUrl": "/demos/microservices",
-        "thumbnailUrl": "/images/showcase/microservices-thumb.webp",
+        "title": "Advanced Image Editing",
+        "description": "Sophisticated inpainting and outpainting examples that impressed community testers, demonstrating superior editing capabilities compared to existing models.",
+        "codeUrl": "/capabilities#editing",
+        "thumbnailUrl": "/images/nano-banana/showcase/editing-thumb.webp",
         "complexity": "Advanced",
-        "category": "System Architecture",
-        "tags": ["Go", "Docker", "Kubernetes", "gRPC"]
+        "category": "Image Editing",
+        "tags": ["Inpainting", "Outpainting", "Editing", "Seamless"]
       },
       {
         "id": "showcase-4",
-        "title": "Mobile App Development",
-        "description": "Cross-platform mobile app development, from UI design to native feature integration, one-stop solution.",
-        "codeUrl": "/demos/mobile-app",
-        "thumbnailUrl": "/images/showcase/mobile-app-thumb.webp",
+        "title": "Artistic Style Transfer",
+        "description": "Demonstration of versatile artistic style generation across different mediums, from digital art to traditional painting styles with consistent quality.",
+        "codeUrl": "/capabilities#styles",
+        "thumbnailUrl": "/images/nano-banana/showcase/styles-thumb.webp",
         "complexity": "Intermediate",
-        "category": "Mobile Development",
-        "tags": ["Flutter", "Dart", "iOS", "Android"]
+        "category": "Style Generation",
+        "tags": ["Artistic", "Styles", "Creative", "Versatile"]
       },
       {
         "id": "showcase-5",
-        "title": "Blockchain Smart Contract",
-        "description": "Complete smart contract development from concept to deployment, including security audits and test cases.",
-        "codeUrl": "/demos/smart-contract",
-        "thumbnailUrl": "/images/showcase/smart-contract-thumb.webp",
+        "title": "Technical Precision",
+        "description": "Examples showcasing the model's ability to generate technically accurate content including architectural details, mechanical components, and scientific visualizations.",
+        "codeUrl": "/capabilities#technical",
+        "thumbnailUrl": "/images/nano-banana/showcase/technical-thumb.webp",
         "complexity": "Expert",
-        "category": "Blockchain",
-        "tags": ["Solidity", "Web3", "Ethereum", "DeFi"]
+        "category": "Technical Generation",
+        "tags": ["Technical", "Precision", "Architecture", "Scientific"]
       },
       {
         "id": "showcase-6",
-        "title": "Game Engine Development",
-        "description": "2D/3D game engine core functionality implementation, including rendering pipeline, physics engine and resource management system.",
-        "codeUrl": "/demos/game-engine",
-        "thumbnailUrl": "/images/showcase/game-engine-thumb.webp",
-        "complexity": "Expert",
-        "category": "Game Development",
-        "tags": ["C++", "OpenGL", "Vulkan", "Game Engine"]
+        "title": "Character and Portrait Generation",
+        "description": "High-quality character and portrait generation with consistent features, expressions, and styling across multiple variations and angles.",
+        "codeUrl": "/capabilities#portraits",
+        "thumbnailUrl": "/images/nano-banana/showcase/portraits-thumb.webp",
+        "complexity": "Advanced",
+        "category": "Character Generation",
+        "tags": ["Portraits", "Characters", "Consistent", "Expression"]
       }
     ]
   },
   "testimonials": {
-    "title": "Real Developer Reviews",
-    "subtitle": "Join tens of thousands of satisfied developers and technical teams worldwide",
+    "title": "Community Research Feedback",
+    "subtitle": "Insights from AI researchers and community testers worldwide",
     "items": [
       {
         "id": "testimonial-1",
-        "name": "David Zhang",
-        "role": "Senior Software Engineer",
-        "company": "ByteDance",
-        "avatar": "/images/avatars/zhang-wei.webp",
-        "content": "Qwen3-Coder has completely transformed my programming approach. From requirement analysis to code implementation, it understands complex business logic and generates high-quality code. Now I can focus on architecture design rather than repetitive coding work.",
+        "name": "Dr. Sarah Chen",
+        "role": "AI Research Scientist",
+        "company": "Stanford AI Lab",
+        "avatar": "/images/avatars/sarah-chen.webp",
+        "content": "The anonymous testing results for Nano-Banana are remarkable. The model's ability to follow complex prompts while maintaining visual coherence surpasses many established models. This represents a significant advancement in lightweight AI architecture.",
         "rating": 5,
         "featured": true
       },
       {
         "id": "testimonial-2",
-        "name": "Lisa Johnson",
-        "role": "Technical Director",
-        "company": "Microsoft",
-        "avatar": "/images/avatars/lisa-johnson.webp",
-        "content": "After our team started using Qwen3-Coder, development efficiency increased by 300%. It not only generates code but also provides best practice recommendations and security checks. This is the most intelligent programming assistant I've ever seen.",
+        "name": "Alex Rodriguez",
+        "role": "Computer Vision Engineer",
+        "company": "Independent Researcher",
+        "avatar": "/images/avatars/alex-rodriguez.webp",
+        "content": "Having tested Nano-Banana through Chatbot Arena, I was impressed by its image editing capabilities. The inpainting and outpainting quality is 'amazing' - significantly better than what we've seen from other models in this category.",
         "rating": 5,
         "featured": true
       },
       {
         "id": "testimonial-3",
-        "name": "Alex Chen",
-        "role": "Full-stack Developer",
-        "company": "Independent Developer",
-        "avatar": "/images/avatars/alex-chen.webp",
-        "content": "As an independent developer, Qwen3-Coder is like having a professional development team. It helps me with rapid prototyping, from frontend to backend, from database design to API implementation - everything is covered.",
+        "name": "Prof. Michael Zhang",
+        "role": "Machine Learning Professor",
+        "company": "MIT CSAIL",
+        "avatar": "/images/avatars/michael-zhang.webp",
+        "content": "The historical connection to the 2018 banana research is fascinating. Nano-Banana demonstrates how adversarial research has evolved into robust generation capabilities. It's a testament to Google's long-term AI research vision.",
         "rating": 5,
         "featured": false
       },
       {
         "id": "testimonial-4",
-        "name": "Sarah Kim",
-        "role": "AI Researcher",
-        "company": "OpenAI",
-        "avatar": "/images/avatars/sarah-kim.webp",
-        "content": "Qwen3-Coder's Agentic capabilities are impressive. It can engage in multi-turn conversations, understand context, and even autonomously solve complex technical problems. This represents the future of AI programming assistants.",
+        "name": "Emma Thompson",
+        "role": "AI Artist & Researcher",
+        "company": "Creative AI Collective",
+        "avatar": "/images/avatars/emma-thompson.webp",
+        "content": "From an artistic perspective, Nano-Banana's ability to generate complex scenes in single prompts is extraordinary. The surreal macro photography examples show a level of detail and creativity that opens new possibilities for AI-assisted art.",
         "rating": 5,
         "featured": false
       },
       {
         "id": "testimonial-5",
-        "name": "Roberto Silva",
-        "role": "DevOps Engineer",
-        "company": "Netflix",
-        "avatar": "/images/avatars/roberto-silva.webp",
-        "content": "For microservices architecture and containerized deployment, Qwen3-Coder provides highly professional solutions. It understands modern DevOps practices, and the configuration files and scripts it generates all meet production environment standards.",
+        "name": "Dr. James Liu",
+        "role": "AI Ethics Researcher",
+        "company": "Partnership on AI",
+        "avatar": "/images/avatars/james-liu.webp",
+        "content": "The transparent community testing approach for Nano-Banana sets a positive precedent. Anonymous evaluation on platforms like Chatbot Arena ensures unbiased assessment and builds trust in AI model capabilities.",
         "rating": 5,
         "featured": true
       },
       {
         "id": "testimonial-6",
-        "name": "Taro Tanaka",
-        "role": "Mobile Development Lead",
-        "company": "Sony Interactive",
-        "avatar": "/images/avatars/tanaka-taro.webp",
-        "content": "Cross-platform mobile development has never been this simple. Qwen3-Coder not only supports Flutter and React Native but also optimizes performance for different platforms. Our app release cycle has been shortened by 50%.",
+        "name": "Lisa Park",
+        "role": "Generative AI Specialist",
+        "company": "Adobe Research",
+        "avatar": "/images/avatars/lisa-park.webp",
+        "content": "The technical efficiency of Nano-Banana is impressive. Achieving such high-quality results with a lightweight architecture could democratize access to advanced image generation capabilities across different platforms and devices.",
         "rating": 5,
         "featured": false
       }
@@ -233,70 +233,70 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about Qwen3-Coder",
+    "subtitle": "Everything you need to know about Nano-Banana AI research",
     "items": [
       {
-        "id": "what-is-qwen3-coder",
-        "question": "What is Qwen3-Coder?",
-        "answer": "Qwen3-Coder is Alibaba's next-generation AI programming assistant based on the Qwen3 large model architecture. It has powerful code generation, understanding, and optimization capabilities, supports 50+ programming languages, and can engage in multi-turn conversational interactions to help developers throughout the entire development process from requirement analysis to code implementation."
+        "id": "what-is-nano-banana",
+        "question": "What is Google's Nano-Banana AI model?",
+        "answer": "Nano-Banana is reportedly Google's unreleased text-to-image AI model, discovered through anonymous community testing. It combines lightweight architecture (inspired by 'Nano' like Gemini Nano) with advanced image generation capabilities. The name references Google's 2018 adversarial attack research involving banana misclassification, symbolizing the evolution from recognition challenges to generation mastery."
       },
       {
-        "id": "agentic-capabilities",
-        "question": "What are Agentic programming capabilities?",
-        "answer": "Agentic programming is a core feature of Qwen3-Coder, which has autonomous thinking, planning, and decision-making capabilities. It can engage in multi-turn conversations, understand complex requirements, autonomously decompose tasks, call tools and APIs, and even self-correct and optimize. This makes it not just a code generator, but an intelligent programming partner."
+        "id": "discovery-process",
+        "question": "How was Nano-Banana discovered?",
+        "answer": "Nano-Banana was discovered through anonymous testing on Chatbot Arena (lmarena.ai), where AI community members test models without knowing their identity. Testers began noticing exceptional performance in image generation and editing tasks, eventually identifying patterns that suggested this was a previously unknown Google model."
       },
       {
-        "id": "supported-languages",
-        "question": "Which programming languages and frameworks are supported?",
-        "answer": "Qwen3-Coder supports 50+ programming languages, including Python, JavaScript, TypeScript, Java, C++, Go, Rust, Swift, Kotlin, and more. It also supports mainstream frameworks such as React, Vue, Angular, Django, Spring Boot, Express.js, Flutter, React Native, and cloud-native technology stacks."
+        "id": "capabilities-comparison",
+        "question": "How does Nano-Banana compare to other AI models?",
+        "answer": "Based on community testing, Nano-Banana demonstrates superior image editing capabilities compared to OpenAI models, with 'amazing' inpainting and outpainting quality. It excels in complex scene generation from single prompts and shows exceptional prompt-following accuracy. However, like other models, it has limitations in text rendering and occasional logical inconsistencies."
       },
       {
-        "id": "context-length",
-        "question": "How powerful is the long context capability?",
-        "answer": "Qwen3-Coder supports 256K tokens of long context, expandable to 1M tokens. This means it can understand and process complete codebases of large projects, maintain contextual consistency, perform cross-file code analysis and refactoring, and truly understand the overall architecture of projects."
+        "id": "technical-architecture",
+        "question": "What makes Nano-Banana's architecture special?",
+        "answer": "Nano-Banana appears to use a lightweight architecture optimized for efficiency while maintaining high-quality output. This approach, similar to Google's Gemini Nano strategy, enables powerful AI capabilities with reduced computational requirements, potentially making advanced image generation more accessible across different platforms."
       },
       {
-        "id": "ide-integration",
-        "question": "How does it integrate with existing development environments?",
-        "answer": "Qwen3-Coder provides multiple integration methods: VS Code plugin, IntelliJ IDEA plugin, Vim/Neovim plugin, Qwen Code command-line tool, REST API and SDK. It supports collaborative use with tools like GitHub Copilot and Claude Code, seamlessly integrating into your development workflow."
+        "id": "testing-methodology",
+        "question": "How reliable are the performance assessments?",
+        "answer": "The assessments are based on anonymous community testing through platforms like Chatbot Arena, which provides unbiased evaluation since testers don't know which model they're using. This methodology reduces bias and provides authentic user feedback, though all findings should be considered preliminary until official confirmation."
       },
       {
-        "id": "enterprise-security",
-        "question": "How is enterprise-level security guaranteed?",
-        "answer": "Qwen3-Coder complies with SOC 2 Type II standards, uses AES-256 encryption, and supports on-premises and private cloud deployment. Code privacy is strictly protected and will not be used for model training. It provides enterprise-level security features such as audit logs, access control, and data residency."
+        "id": "limitations-analysis",
+        "question": "What are Nano-Banana's known limitations?",
+        "answer": "Current limitations include occasional logical inconsistencies (like impossible geographical features), physics violations in fluid dynamics, and text rendering challenges (particularly with non-Latin scripts). These issues are similar to other current generation models and represent areas for future improvement."
       },
       {
-        "id": "pricing-model",
-        "question": "What is the pricing model?",
-        "answer": "We offer flexible pricing plans: the free version provides basic features, the personal professional version is suitable for independent developers, the team version supports collaboration features, and the enterprise version provides customized services and on-premises deployment. All versions include core AI programming capabilities, billed by usage or subscription model."
+        "id": "research-implications",
+        "question": "What are the broader implications of this research?",
+        "answer": "Nano-Banana's capabilities suggest significant progress in lightweight AI architecture and adversarial robustness. The evolution from the 2018 banana research to current generation capabilities demonstrates how foundational research in AI vulnerabilities has led to more robust and capable systems."
       },
       {
-        "id": "code-quality",
-        "question": "How is the quality of generated code guaranteed?",
-        "answer": "Qwen3-Coder is optimized through Agent RL technology and performs excellently in authoritative benchmarks such as SWE-Bench Verified. The generated code follows best practices, includes complete error handling, security checks, performance optimization, and detailed comments. It supports code review, test case generation, and refactoring suggestions."
+        "id": "official-status",
+        "question": "Is this officially confirmed by Google?",
+        "answer": "No, Nano-Banana remains speculative and has not been officially confirmed by Google. All analysis is based on community observations and anonymous testing results. This research represents independent analysis of potentially unreleased technology and should be considered preliminary until official confirmation."
       }
     ]
   },
   "cta": {
-    "title": "Ready to revolutionize your programming experience?",
-    "subtitle": "Join tens of thousands of developers worldwide and experience the infinite possibilities of AI programming",
-    "description": "Start your Qwen3-Coder journey today and experience the powerful capabilities of next-generation AI programming assistant. Free trial, no credit card required.",
+    "title": "Explore the Future of AI Image Generation",
+    "subtitle": "Dive deeper into Nano-Banana's capabilities and research findings",
+    "description": "Join the research community in analyzing this breakthrough AI model. Explore technical analysis, performance benchmarks, and the fascinating evolution from adversarial vulnerabilities to generation mastery.",
     "primaryButton": {
-      "text": "Start Free Trial Now",
-      "link": "https://qwen3coder.com/try",
+      "text": "View Technical Analysis",
+      "link": "/analysis",
       "style": "primary"
     },
     "secondaryButton": {
-      "text": "View Pricing Plans",
-      "link": "/pricing",
+      "text": "See Capabilities",
+      "link": "/capabilities",
       "style": "secondary"
     },
     "features": [
-      "Free trial credits",
-      "50+ programming languages support",
-      "Enterprise-grade security",
-      "24/7 technical support"
+      "Comprehensive model analysis",
+      "Performance benchmarks vs leading models",
+      "Historical research context",
+      "Community testing insights"
     ],
-    "backgroundImage": "/images/backgrounds/cta-bg.webp"
+    "backgroundImage": "/images/nano-banana/cta-bg.webp"
   }
 }

@@ -1,3 +1,11 @@
+# HTTP到HTTPS重定向配置
+# 强制所有HTTP请求重定向到HTTPS
+http://nanobananaimage.org/*    https://nanobananaimage.org/:splat    301!
+http://www.nanobananaimage.org/*    https://www.nanobananaimage.org/:splat    301!
+
+# WWW到非WWW重定向（可选）
+https://www.nanobananaimage.org/*    https://nanobananaimage.org/:splat    301!
+
 # SPA路由重定向配置
 # 所有未匹配的路由都重定向到index.html，用于React Router支持
 /*    /index.html   200
@@ -8,4 +16,4 @@
 
 # 安全重定向
 /wp-admin/*    /    301
-/admin/*       /    301 
+/admin/*       /    301

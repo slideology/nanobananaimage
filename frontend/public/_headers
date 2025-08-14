@@ -36,6 +36,7 @@
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   
 # 根目录
 /
@@ -44,9 +45,10 @@
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   
 # API路由（如果有）
 /api/*
   Cache-Control: no-cache, no-store, must-revalidate
   X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff 
+  X-Content-Type-Options: nosniff

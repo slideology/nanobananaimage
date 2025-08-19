@@ -95,6 +95,14 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* 广告位 */}
+      {/* 广告区域 */}
+      <section className="py-8">
+        <div className="container mx-auto px-4 flex justify-center">
+          <div id="container-c2e95556903c6f4bc49bfefaac809241" className="w-full max-w-4xl"></div>
+        </div>
+      </section>
+
       {/* Key Features Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
